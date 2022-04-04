@@ -27,6 +27,7 @@
                 <p>Password</p>
                 <input type="password" name="password" placeholder="Password">
                 <button type="sub">Log In</button>
+                <div class="signup-link">Not a member?<a href="register.html">Register now</a></div>
             </form>
         </form>
     </div>

@@ -7,7 +7,7 @@
 body{
     /* background: url("../Img/zoo.jpg") no repeat; */
     background-size: cover;
-    background-color: aqua;
+    background-image: url("../Img/animals4.jpg");
 }
 
 .login-form{

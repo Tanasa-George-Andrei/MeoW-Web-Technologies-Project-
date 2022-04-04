@@ -7,7 +7,7 @@
 body{
     /* background-image: url("../Img/zoo.jpg") no repeat; */
     background-size: cover;
-    background-color: aqua;
+    background-image: url("../Img/animals4.jpg");
 }
 
 .registration-form{
