@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#super-container{
+    background-image: url("../Img/animals4.jpg");
+    font-size: clamp(1rem, 1.15vw + .5rem, 1.4rem);
+}
+
+#container{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    align-content: flex-start;
+    column-gap: 20px;
+    columns: 1;
+    padding: 10px;
+    margin-inline: max(0px, 5vw - 2.5vh);
+    background-color: white;
+}
+
+#slides{
+    order: 1;
+    flex-grow: 2;
+    flex-shrink: 1;
+    flex-basis: center;
+    align-self: center;
+    width: 100%;
+    text-align: center;
+
+}
+
+#slides img{
+    max-width: 50%;
+    max-height: 50%;
+    object-fit: cover;
+}
+
+#slides .back-slide{
+    align-self: left;
+    z-index: 1;
+}
+
+#slides .front-slide{
+    align-self: center;
+    z-index: 2;
+}
+
+#slides .forward-slide{
+    align-self: right;
+    z-index: 1;
+}
