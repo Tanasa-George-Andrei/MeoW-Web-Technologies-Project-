@@ -48,7 +48,7 @@
         
         <h3><span>2.1 </span>Pagina principala</h3>
         <p>
-          Pagina principala ofera un calduros "bun venit" si prezinta mai multe optiuni aflate intr-un meniu prezentat sub forma unei bare de navigatie. <br>
+          De indata ce inregistrarea s-a realizat cu succes, utilitorul va fi trimis pe pagina principala, pagina de bun venit, unde v-a putea sa-si faca p idee generala despre aceasta aplicatie web. Aceasta directare se face pe baza sesiunii nou create pentru noul username, sesiune ce incepe de indata ce a fost apasat butonul de submit.<br>
           Autor: Taga Stefan Razvan
         </p>
 
@@ -58,7 +58,7 @@
         
         <h3><span>2.2 </span>Pagina wiki</h3>
         <p>
-           Pagina Wiki ofera o serie de informatii referitoare la animalele ce pot fi vizitate la gradina zoologica. <br>
+           Pagina wiki este pagina in care utilizatorl poate accesa informatii despre clasele de animale si totodata despre ficare animal in parte. Accesarea acesteia se va face tot din meniul principal, din nav bar si odata accesata va afisa scurte informatii si totodata diverse albume despre clasele de animale. O data accesat un album se va face conexiunea cu o alta baza de date dedicat animalelor si se selecta informatiile specifice albumului al carui nume a fost accesat de catre utilizator. In fiecare album utilizatorul va gasi informatii despre ficare animal care este in acel album. Aceasta baza de date care memoreaza informatiile despre animale, a fost creata cu 4 coloane: id, clasa, numele si body unde sunt memorate valorile fiecarei specii si animal in parte.<br>
            Autor: Tanase George Andrei
         </p>
           
@@ -68,7 +68,7 @@
         <h3><span>2.3 </span>Pagina Search</h3>
         
         <p>
-          Pagina Search - ofera posibilitate accesarii mai rapide a unor informatii cu privire la un animal sau o clasa de animale. <br>
+          Pagina Search - ofera posibilitate accesarii mai rapide a unor informatii cu privire la un animal sau o clasa de animale. In bara principala fiind un buton special pentru aceasta pe care utilizatorul il poate completa cu o anumita valoare, o data completat apasa pe submit si apoi se face o verificare daca acea valoare se gaseste in baza de date. Daca, pe baza acelui select, se gaseste acea valoare va returna informatiile despre acel animal sau clasa pe care il cauta utilizatorul, iar in caz negativ se va returna un mesaj de eroare. Cautarea acceasta este multi-criteriala, adica orice utilizator poate cauta si dupa clasa si dupa nume, si in momentul completarii acelui camp trebuie selectat daca se face o cautare dupa clasa sau dupa nume. <br>
           Autor: Tanase George Andrei 
         </p>
         
@@ -77,7 +77,7 @@
           
           <h4><span>2.4 </span>Pagina Review</h4>
           <p>
-            Pagina Review contine diferite pareri si sugestii ale utilizatorilor. <br>
+            Pagina Review este pagina cu cel mai mare procent de interactiune cu ceilalti utilizatori pentru ca permite fiecaruia sa-si exprime parerea despre aplicatie sau sa lase sugestii printr-un mesaj. O data accesata aceasta pagina de catre utilitor acesta va putea vizualiza parerirele celorlalti utilitori si sa completeze doua campuri cu username si mesaj pentru a putea lasa un nou mesaj, o noua parere. Campul username trebuie completat cu aceeasi valoare ca cea din baza de date si odata submis acele valori se va face un select din baza de data pentru a vedea daca username-ul corespunde si in caz afirmativ se returna mesajul transmis altfel se va returna un mesaj de eroare. <br>
             Autor: Taga Stefan Razvan
           </p>
          
@@ -87,7 +87,9 @@
         
         <h3><span>2.5 </span>Pagina Contact</h3>
         <p>
-          Pagina Contact este alcatuita din 3 elemente: primul reprezinta pozitionarea pe harta a studentilor care au creat pagina web, al doilea element prezinta email-urile acestora iar al treilea reprezinta un formular pe care utilizatorii il pot completa. <br>
+          Pagina Contact este o pagina cu ajutorul careia utilizatorul poate comunica cu echipa care lucreaza la aplicatie. Aceasta pagina este structurata in doua sub-pagini: 
+            1. Prima sub-pagina este formata din trei campuri ce contin informatii despre adresa sediului central, numarul de telefon de contact al operatorilor si adresa de email unde pot fi gasiti acestia.
+            2. A doua sub-pagina contine tot 3 campuri dar care trebuie completate de catre utilitor, acestea fiind username-ul, adresa de mail, si mesajul pe care aceste doreste sa-l transmita catre echipa. Completarea campurilor username si email trebuie sa fie facuta cu valorile care sunt in baza de date, acestea fiind verificate si pe baza unui select cu acest valori se realiza transmiterea mesajului, altfel se va returna un mesaj de eroare<br>
           Autor: Costin Mihnea-Radu
         </p>
         
@@ -97,7 +99,7 @@
           
         <h4><span>2.4 </span>Pagina About</h4>
         <p>
-          Pagina About ofera informatii generale cu privire la echipa de angajati si la gradina zoologica. <br>
+          Pagina About este o alta pagina din bara principala de meniu ce poate fi accesata oricand. Aici, utilitorul poate afla informatii despre echipa care lucreaza la aceasta aplicatie web. Iar daca doreste sa comunice cu aceata trebuie sa acceseze butonul de contact care-l va redirecta spre pagina de contact. <br>
           Autor: Costin Mihnea-Radu
         </p>
        
@@ -107,7 +109,7 @@
         
         <h3><span>2.6 </span>Pagina LogIn</h3>
         <p>
-          Pagina LogIn este formata dintr-un formular pe care utilizatorii deja inregistrati il pot completa pentru a intra in conturile acestora. In cazul in care acestia nu au cont, acestia pot accesa link-ul SignUp Now, iar in cazul in care acestia au deja un cont insa pot accesa pagina register. <br>
+          Pagina de Log In are un principiu opus fata de pagina de register. Daca in pagina de register completam campurile cu anumite valorile care ulterior erau salvate in baza de date, de data aceasta trebuie sa completam valori care exista in baza de date. Cand utilitorul incearca sa se conncteze la contul sau trebuie sa completeze campurile de username si password cu exact aceleasi valori pe care le-a introdus in pagina de register in momentul crearii contului. Dupa ce au fost completate aceste valorile se va face un select din baza de date cu exact campurile completate de utilitor si aceastea corespund atunci utilitorul va fi redirectat in pagina principala, iar in caz contrar va aparea un mesaj de eroare.<br>
           Autor: Taga Stefan Razvan
         </p>
        
@@ -118,7 +120,7 @@
         
         <h3><span>2.7 </span>Pagina Register</h3>
         <p>
-          Pagina Register este formata dintr-un formular pe care utilizatorii care nu sunt inregistrati il pot completa. Acestia isi vor introduce numele, username-ul si parola. <br>
+          In aceasta pagina intra doar utilizatorii care nu au cont si vor sa acceseze informatiile site-ului. Pagina de register se bazeaza pe o conexiune la o baza de date specifica, in care vor fi memorate valorile campurilor ce sunt cerute a fi completate. Fiecare utilitor trebuie sa aiba un username propriu, de aceea odata introdus un username se verifica daca a mai fost utilizat de un alt utilizator sau nu. O data completat campul de username, mai sunt necesare a fi completate campurile fullname, email si password, care vor si stocate in baza de date in coloanele specifice.<br>
           Autor: Taga Stefan Razvan
         </p>
         
