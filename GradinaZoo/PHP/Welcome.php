@@ -8,34 +8,19 @@
     </head>
 
     <body>
-
+        
     <?php
         session_start();
         if(isset($_SESSION['id']) && isset($_SESSION['username'])){
+        //echo "am ajuns";
     ?>
-    
-        <div class="banner">
-            <div class="navbar">
-                <ul>
-                    <strong><li><a href="welcome.html">Home</a></li></strong>
-                    <strong><li><a href="login.html">LogIn</a></li></strong>
-                    <strong><li><a href="register.html">Register</a></li></strong>
-                    <strong><li><a href="register.html">Logout</a></li></strong>
-                </ul>
-            </div>
-        </div>
 
-        <div class="gradina">
-            <h1>Bun venit la Gradina Zoologica!</h1>
-
-            <a href="bunvenit.html">
-                <button class="button">Bun venit</button>
-            </a>
-        </div>
+    <h1><?php echo $_SESSION['name']; ?></h1>
+    <a href="logout.php"> Logout</a>
 
     <?php
         }else{
-            header("Location:login.php");
+            header("Location:Login2.php");
             exit();
         }
     ?>
