@@ -13,8 +13,8 @@
         <li><a href="#introduction">Introducere</a></li><li><a href="#structure">Structura proiectului</a>
         
         <ol role="directory"><li><a href="#paginaprincipala"><span>3.1 </span>Pagina principala</a></li>
-            <li><a href="#wiki"><span>3.5 </span>wiki</a></li>
             <li><a href="#search"><span>3.5 </span>Search</a></li>
+            <li><a href="#wiki"><span>3.5 </span>wiki</a></li>
             <li><a href="#review"><span>3.5 </span>Review</a></li>
             <li><a href="#about"><span>3.5 </span>About</a></li>
             <li><a href="#contact"><span>3.5 </span>Pagina Contact</a></li>
@@ -54,26 +54,27 @@
 
           
       </section>
-      <section id="wiki">
-        
-        <h3><span>2.2 </span>Pagina wiki</h3>
-        <p>
-           Pagina wiki este pagina in care utilizatorul poate accesa informatii despre clasele de animale si totodata despre ficare animal in parte. Accesarea acesteia se va face tot din meniul principal, din nav bar si odata accesata va afisa scurte informatii si totodata diverse albume despre clasele de animale. O data accesat un album se va face conexiunea cu o alta baza de date dedicat animalelor si se selecta informatiile specifice albumului al carui nume a fost accesat de catre utilizator. In fiecare album utilizatorul va gasi informatii despre ficare animal care este in acel album. Aceasta baza de date care memoreaza informatiile despre animale, a fost creata cu 4 coloane: id, clasa, numele si body unde sunt memorate valorile fiecarei specii si animal in parte.<br>
-           Autor: Tanasă George-Andrei
-        </p>
-          
-      </section>
       <section id="search">
         
-        <h3><span>2.3 </span>Pagina Search</h3>
+        <h3><span>2.2 </span><a href="GradinaZoo/HTML/search.html">Pagina Search</a></h3>
         
         <p>
-          Pagina Search - ofera posibilitate accesarii mai rapide a unor informatii cu privire la un animal sau o clasa de animale. In bara principala fiind un buton special pentru aceasta pe care utilizatorul il poate completa cu o anumita valoare, o data completat apasa pe submit si apoi se face o verificare daca acea valoare se gaseste in baza de date. Daca, pe baza acelui select, se gaseste acea valoare va returna informatiile despre acel animal sau clasa pe care il cauta utilizatorul, iar in caz negativ se va returna un mesaj de eroare. Cautarea acceasta este multi-criteriala, adica orice utilizator poate cauta si dupa clasa si dupa nume, si in momentul completarii acelui camp trebuie selectat daca se face o cautare dupa clasa sau dupa nume. <br>
+          Pagina Search este punctul de start pentru a accesa intregul catalog de informati despre animalele din gradina ZOO. Aceasta pagina este compusa din trei sectiuni. Prima sectiune este compusa din bara de Search si meniul pliabil Advanced care contine toate filtrele pentru o cautare cat mai usoara in catalog. Dar pentru utilizatori mai avansati mai oferim si capabilitatea de a cauta fuzzy fara filtre in catalogul nostru prin scrierea tag-ului specific intre "<>". A doua sectiune este compusa dintr-un carusel de imagini ale celor mai cautate animale ale gradini ZOO, fiecare imagie fiind un link catre pagina Wiki a animalului respectiv. A treia sectiune contine catalogul intreg de animale al gradini ZOO sub forma unei liste de imagini infinite cu posibilitatea pentru utilizator de a alege metoda de sortare, fiecare imagine reprezinta un link catre pagina de Wiki a animalului aratat in imagine.<br>
           Autor: Tanasă George-Andrei
         </p>
         
+      </section>
+      <section id="wiki">
         
-        <section id="review">
+        <h3><span>2.3 </span><a href="GradinaZoo/HTML/wiki.html">Pagina Wiki</a></h3>
+        <p>
+          Pagina Wiki contine toate informatiile despre animalul dorit vizualizari. Aceasta este impartita in doua coloane. Colana din stanga contine o imagine cu animalul, numele normal/popular si numele stintific al acestuai. Colana din dreapta contine toate informatiile despre animal separata in sectiuni relaventate, personalizate pentur fiecare categorie de animal.<br>  
+          Daca permite timpul se va implementa un sistem de votare similar Reddit pentru fiecare animal si animalele cu cel mai mare scor vor fi afisate pe pagina de search in carusel. Dar va mai fi folosit si pentru sortarea animaleleor in sectiune de catalog a pagini Search<br>
+          Autor: Tanasă George-Andrei
+        </p>
+          
+      </section>
+      <section id="review">
           
           <h4><span>2.4 </span>Pagina Review</h4>
           <p>
@@ -81,7 +82,7 @@
             Autor: Taga Stefan Razvan
           </p>
          
-        </section>
+      </section>
         
       <section id="contact">
         
