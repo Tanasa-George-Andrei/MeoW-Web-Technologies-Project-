@@ -49,43 +49,105 @@
     justify-content: space-evenly;
     align-items: flex-start;
     align-content: flex-start;
-    column-gap: 20px;
+    row-gap: 15vh;
     columns: 1;
     padding: 10px;
     margin-inline: max(0px, 5vw - 2.5vh);
     background-color: white;
 }
 
-#slides{
+#search{
     order: 1;
+    flex-grow: 2;
+    flex-shrink: 1;
+    flex-basis: center;
+    align-self: center;
+    text-align: center;
+    display: block;
+    float: right;
+    padding: 6px;
+    border: none;
+    font-size: 17px;
+}
+#search input[type=text]{
+    width: 60vw;
+    height: max(3vh, 25px);
+}
+
+#search input[type=button]{
+    height: max(3vh, 25px);
+}
+
+#slides{
+    order: 2;
     flex-grow: 2;
     flex-shrink: 1;
     flex-basis: center;
     align-self: center;
     width: 100%;
     text-align: center;
-
+    align-content: center;
+    max-width: 70vw;
+    max-height: 70vh;
+    margin-top: -10vh;
 }
 
 #slides img{
-    max-width: 50vw;
-    max-height: 50vh;
+    max-width: 70vw;
+    max-height: 70vh;
     object-fit: cover;
-    position: relative;
 }
 
-#slides .back-slide{
-    align-self: left;
-    z-index: 1;
+#slides figcaption{
+    background-color: black;
+    color: white;
+    font-style: italic;
+    padding-top: 2px;
+    text-align: center;
 }
 
-#slides .front-slide{
+#slides input[type=button]{
+    height: max(4vh, 50px);
+    width: max(4vh, 50px);
+}
+
+#animalgrid{
+    order: 3;
+    flex-grow: 2;
+    flex-shrink: 1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: baseline;
+    align-content: flex-start;
+    gap: 10px 20px;
+    columns: 5;
+    flex-basis: center;
     align-self: center;
-    margin-inline: -10vw;
-    z-index: 2;
+    width: 100%;
 }
 
-#slides .forward-slide{
-    align-self: right;
-    z-index: 1;
+.griditem{
+    order: 1;
+    flex-grow: 2;
+    flex-shrink: 1;
+    flex-basis: center;
+    align-self: center;
+    text-align: center;
+    max-width: 15vw;
+}
+
+.griditem figcaption{
+    background-color: black;
+    color: white;
+    font-style: italic;
+    padding-top: 2px;
+    text-align: center;
+    display: block;
+}
+
+.griditem img{
+    max-width: 15vw;
+    max-height: 15vh;
+    object-fit: cover;
 }
