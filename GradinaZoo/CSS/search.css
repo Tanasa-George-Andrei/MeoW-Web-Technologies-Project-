@@ -60,7 +60,7 @@
     order: 1;
     flex-grow: 2;
     flex-shrink: 1;
-    flex-basis: center;
+    flex-basis: auto;
     align-self: center;
     text-align: center;
     display: block;
@@ -82,7 +82,7 @@
     order: 2;
     flex-grow: 2;
     flex-shrink: 1;
-    flex-basis: center;
+    flex-basis: auto;
     align-self: center;
     width: 100%;
     text-align: center;
@@ -122,19 +122,19 @@
     align-content: flex-start;
     gap: 10px 20px;
     columns: 5;
-    flex-basis: center;
+    flex-basis: auto;
     align-self: center;
     width: 100%;
 }
 
 .griditem{
     order: 1;
-    flex-grow: 2;
+    flex-grow: 1;
     flex-shrink: 1;
-    flex-basis: center;
+    flex-basis: auto;
     align-self: center;
     text-align: center;
-    max-width: 15vw;
+    max-width: max(100%, 5vw - 2.5vh);
 }
 
 .griditem figcaption{
@@ -147,7 +147,6 @@
 }
 
 .griditem img{
-    max-width: 15vw;
-    max-height: 15vh;
+    max-height: min(15vh, 200px);
     object-fit: cover;
 }
