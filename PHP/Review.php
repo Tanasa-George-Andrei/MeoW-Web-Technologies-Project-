@@ -1,4 +1,4 @@
-<!DOCTYPE hmtl>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../CSS/review.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <title>Home</title>
     </head>
 
@@ -57,22 +58,58 @@
                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptate nostrum maiores!</p>
                   </div> 
                </div>
+
+               <div class="comments-box">
+                  <img src="../Img/profile.jpg" alt="">
+                  <div class="name"><h3>Username4</h3>
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptate nostrum maiores!</p>
+                  </div> 
+               </div>
                
             </div>
-
-            <div class="commets-container">
-               <div class="package1">
-                  <img src="../Img/profile.jpg" alt="">
-                  <h2> Tell us your opinion!</h2>
+            <div id="demo"></div>
+            <form method="POST" id="form" name="form">
+               <div class="commets-container">
+                  <div class="package1">
+                     <img src="../Img/profile.jpg" alt="">
+                     <input type="text" placeholder="username" name="username" id="username">
+                  </div>
+                  <div class="package2">
+                     <textarea name="message" id="message" rows="5" placeholder="Do you want to say something?"></textarea>
+                  </div>
+                  <div class="package3">
+                     <input type="submit" class="send-btn" value="Send" name="post">
+                  </div>
                </div>
-               <div class="package2"></div>
-               <textarea name="message" rows="5" placeholder="Do you want to say something?"></textarea>
-               <div class="package3">
-                  <input type="submit" value="submit" class="send-btn" value="Send">
-               </div>
-            </div>
+            </form>
 
          </section>
+
       </div>
+
+      <script>
+         $(document).ready(function(){
+            $('#form').submit(function(){
+               $.ajax({
+                  type: 'POST',
+                  url: "commentForm.php",
+                  data:{
+                     username: $('#username').val(),
+                     message: $('#message').val(),
+                  },
+                  dataType : 'json',
+                  success: function(result){
+                     if(result.success){
+                        $('#demo').html('<div style=color:green>'+result.message+'</div>');
+                        window.location.href='';
+                     }else{
+                        $('#demo').html('<div style=color:red>**'+result.message+'</div>');
+                     }
+                  }
+               });
+               return false;
+            });
+         });
+      </script>
     </body>
 </html>

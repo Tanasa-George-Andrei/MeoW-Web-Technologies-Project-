@@ -24,7 +24,6 @@
 
 
             <p>Full name</p>
-            <!-- <input type="text" name="fullname" placeholder="Full name"> -->
             <?php if (isset($_GET['fullname'])) { ?>
                 <input type="text" name="fullname" placeholder="Full name" value="<?php echo $_GET['fullname']; ?>"><br>
             <?php }else{ ?>
@@ -33,7 +32,6 @@
 
 
             <p>Username</p>
-            <!-- <input type="text" name="username" placeholder="Username"> -->
             <?php if (isset($_GET['username'])) { ?>
                 <input type="text" name="username" placeholder="Username" value="<?php echo $_GET['username']; ?>"><br>
             <?php }else{ ?>
@@ -42,7 +40,6 @@
 
 
             <p>Email</p>
-            <!-- <input type="email" name="email" placeholder="Email"> -->
             <?php if (isset($_GET['email'])) { ?>
                 <input type="text" name="email" placeholder="Email" value="<?php echo $_GET['email']; ?>"><br>
             <?php }else{ ?>
