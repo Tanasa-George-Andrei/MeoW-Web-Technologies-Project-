@@ -1,10 +1,20 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.banner{
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body{
+    min-height: 100vh;
+    background: url(background.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .banner{
     width: 100%;
     height: 100%;
     background-image: url("../Img/animals4.jpg");
@@ -33,48 +43,141 @@
     text-transform: uppercase;
 }
 
-.login-form{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 350px;
-}
-
-
-.login-form h1{
-    font-size: 30px;
-    text-align: center;
-    text-transform: uppercase;
-    margin: 40px 0;
-}
-
-.login-form p{
-    font-size: 20px;
-    margin: 15px 0;
-}
-
-.login-form input{
-    font-size: 16px;
-    padding: 15px 10px;
+  .contact-section{
     width: 100%;
-    border: 0;
-    border-radius: 5px;
-    outline: none;
-}
-
-.login-form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contact-info{
+    color: #fff;
+    max-width: 500px;
+    line-height: 65px;
+    padding-left: 50px;
     font-size: 18px;
-    font-weight: bold;
-    margin: 20px 0;
-    padding: 10px 15px;
-    width: 50%;
-    border: 0;
+  }
+  
+  .contact-info i{
+    margin-right: 20px;
+    font-size: 25px;
+  }
+  
+  .contact-form{
+    max-width: 700px;
+    margin-right: 50px;
+  }
+  
+  .contact-info, .contact-form{
+    flex: 1;
+  }
+  
+  .contact-form h2{
+    color: #fff;
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+  
+  .contact-form .text-box{
+    background: rgb(255, 255, 255);
+    color: #fff;
+    border: none;
+    width: calc(50% - 10px);
+    height: 50px;
+    padding: 12px;
+    font-size: 15px;
     border-radius: 5px;
-    background-color: aliceblue;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    opacity: 0.9;
+  }
+  
+  .contact-form .text-box:first-child{
+    margin-right: 15px;
+  }
+  
+  .contact-form textarea{
+    background: rgb(255, 255, 255);
+    color: #fff;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    min-height: 200px;
+    max-height: 400px;
+    resize: vertical;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    opacity: 0.9;
+  }
+  
+  .contact-form .send-btn{
+    float: right;
+    background: #2E94E3;
+    color: #fff;
+    border: none;
+    width: 120px;
+    height: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 5px;
     cursor: pointer;
-}
-
-.login-form button:hover{
-    color: red;
-}
+    transition: 0.3s;
+    transition-property: background;
+  }
+  
+  .contact-form .send-btn:hover{
+    background: #0582E3;
+  }
+  
+  @media screen and (max-width: 950px){
+    .contact-section{
+      flex-direction: column;
+    }
+  
+    .contact-info, .contact-form{
+      margin: 30px 50px;
+    }
+  
+    .contact-form h2{
+      font-size: 30px;
+    }
+  
+    .contact-form .text-box{
+      width: 100%;
+    }
+  }
+  
+  /*css for alert messages*/
+  
+  .alert-success{
+    z-index: 1;
+    background: #D4EDDA;
+    font-size: 18px;
+    padding: 20px 40px;
+    min-width: 420px;
+    position: fixed;
+    right: 0;
+    top: 10px;
+    border-left: 8px solid #3AD66E;
+    border-radius: 4px;
+  }
+  
+  .alert-error{
+    z-index: 1;
+    background: #FFF3CD;
+    font-size: 18px;
+    padding: 20px 40px;
+    min-width: 420px;
+    position: fixed;
+    right: 0;
+    top: 10px;
+    border-left: 8px solid #FFA502;
+    border-radius: 4px;
+  }
+        
