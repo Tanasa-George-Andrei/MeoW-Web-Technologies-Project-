@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+
+.banner{
+    width: 100%;
+    height: 1000px; 
+    background-image: url("../Img/animals4.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.navbar ul li img{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-bottom: -12px;
+}
+
+.navbar ul li h1{
+    color: wheat;
+    font-size: 20px;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color:white;
+    text-transform: uppercase;
+}
+
+.navbar ul li a:hover{
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar a.active{
+    background-color: #04AA6D;
+    color: white;
+}
+
+.navbar .icon{
+    display: none;
+}
+
+.table{
+    width: 100%;
+}
+
+.table_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(240, 240, 240);
+}
+
+.table_header p{
+    color: #000000;
+}
+
+button{
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 10px;
+    color: #ffffff;
+}
+td button:nth-child(1){
+    background-color: #f00000;
+}
+
+.search{
+    padding: 10px 20px;
+    color: #ffffff;
+    background-color: #0298cf;
+}
+
+input{
+    padding: 9px 20px;
+    margin: -5px;
+    outline: none;
+    border: 1px solid #0298cf;
+    border-radius: 6px;
+    color: #0298cf;
+}
+.table_section{
+    height: 650px;
+    overflow: auto;
+}
+
+table{
+    width: 100%;
+    table-layout: fixed;
+    min-width: 1000px;
+    border-collapse: collapse;
+}
+
+thead th{
+    position: sticky;
+    top: 0;
+    background-color: #0298cf;
+    color: #f6f9fc;
+    font-size: 15px;
+}
+
+th, td{
+    border-bottom: 1px solid #dddddd;
+    padding: 10px 20px;
+    word-break: break-all;
+    text-align: center;
+    background-color: #ddd;
+}
+
+td img{
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 5px solid;
+}
+
+tr:hover td{
+    color: #0298cf;
+    cursor: pointer;
+    background-color: #f6f9fc;
+}
+
