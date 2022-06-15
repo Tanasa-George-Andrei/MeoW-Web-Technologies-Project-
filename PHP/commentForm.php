@@ -1,4 +1,41 @@
 <?php
+    // //VARIANTA 1
+    // $conn=mysqli_connect("localhost", "root", "", "atlaszoologic") or die("Connection failed");
+    // $error = '';
+    // $username = '';
+    // $message = '';
+
+    // if(empty($_POST['username']))
+    // {
+    //     $error .= '<p class="text-danger">Name is required </p>';
+    // }else{
+    //     $username = $_POST['username'];
+    // }
+
+    // if(empty($_POST['message']))
+    // {
+    //     $error .= '<p class="text-danger">Comment is required </p>';
+    // }else{
+    //     $message = $_POST['message'];
+    // }
+
+    // if($error == ''){
+    //     $query = "INSERT INTO review (username, comment) VALUES (:username, :comment)";
+    //     $statement = $conn->prepare($query);
+    //     $statement->execute(
+    //         array(
+    //             ':username' => $username,
+    //             ':comment' => $message
+    //         )
+    //     );
+    //     $error = '<label class="tesx-success">Comment added</label>';
+    // }
+    // $data = array(
+    //     'error' => $error
+    // );
+    // echo json_encode($data);
+
+    //VARIANTA 2
     //require('db_connect.php');
     header('Content-Type: application/json');
     $json = [];
@@ -24,6 +61,7 @@
     echo json_encode($json);
 
 
+    // VARIANTA 3
     // if($conn){
     //     // mysqli_select_db($conn, "atlaszoologic");
     //     $query = "INSERT INTO review (username, comment) VALUES ('$username', '$message')";

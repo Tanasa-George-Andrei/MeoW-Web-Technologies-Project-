@@ -51,6 +51,8 @@
             <input type="password" name="password" placeholder="Password">
             
             <button type="sub">Sign Up</button>
+
+            <div class="signup-link">Already have account?<a href="login.php">Log in</a></div>
         </form>
 
     </div>

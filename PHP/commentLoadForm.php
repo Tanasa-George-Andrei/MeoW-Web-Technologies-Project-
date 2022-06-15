@@ -1,22 +1,16 @@
 <?php
+// $conn=  $db=new PDO("mysql:host=localhost;dbname=review;charset-utf8","root","");
 
-$conn=mysqli_connect("localhost", "root", "", "atlaszoologic") or die("Connection failed");
+// $query = "SELECT * FROM review WHERE username = 'stefan1997' ORDER BY id DESC";
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-} 
+// $statement = $conn->prepare($query);
 
-$sql = "SELECT username, message FROM review";
-$result = $conn->query($sql);
+// $statement->execute();
 
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-      echo "Name: " . $row["username"]. " " . $row["message"]. "<br>";
-    }
-  } else {
-    echo "0 results";
-  }
-  $conn->close();
+// $result = $statement->fetchAll();
+
+$conn = mysqli_connect("localhost", "root", "", "atlaszoologic") or die("Connection failed");
+$query = "SELECT username, comment FROM review";
+$result = $conn->query($query);
 
 ?>

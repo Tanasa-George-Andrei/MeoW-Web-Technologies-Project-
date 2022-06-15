@@ -11,25 +11,37 @@
     </head>
 
     <body>
-
-    <?php
-        session_start();
-        if(isset($_SESSION['id']) && isset($_SESSION['username'])){
-    ?>
     
         <div class="banner">
             <div class="navbar">
                 <ul>
-                    <strong><li><a href="../PHP/login.php" target="_top">LogIn</a></li></strong>
-                    <strong><li><a href="" target="_top">Logout</a></li></strong>
+                    <?php
+                        session_start();
+                        if(isset($_SESSION['id']) && isset($_SESSION['username'])){
+                    ?>
+                    <li> <img src="../Img/profile.jpg" alt=""> </li>
+                    <li> <h1>Hello, <?php echo $_SESSION['username']; ?></h1> </li>
+                    <li><a href="logout.php" target="_top">Logout</a></li>
+                    <?php
+                        }else{
+                    ?>
+                    <li><a href="Login.php" target="_top">Log In</a></li>
+                    <?php
+                        }
+                    ?>
+                    <?php if($_SESSION['username'] == 'admin'){?>
+                        <li><a href="adminPage.php" target="_top">AdminSection</a></li>
+                    <?php
+                        }
+                    ?>
                 </ul>
                 <ul>
-                    <strong><li><a href="../PHP/Welcome.php">Home</a></li></strong>
-                    <strong><li><a href="../HTML/review.html" target="_top">Review</a></li></strong>
-                    <strong><li><a href="../HTML/search.html" target="_top">Search</a></li></strong>
-                    <strong><li><a href="../HTML/about.html" target="_top">About</a></li></strong>
-                    <strong><li><a href="../HTML/contact.html" target="_top">Contact Us</a></li></strong>
-                    <strong><li><a href="../HTML/raport.html" target="_top">Raport</a></li></strong>
+                    <li><a href="../PHP/Welcome.php">Home</a></li>
+                    <li><a href="../PHP/Review.php" target="_top">Review</a></li>
+                    <li><a href="../HTML/search.html" target="_top">Search</a></li>
+                    <li><a href="../HTML/about.html" target="_top">About</a></li>
+                    <li><a href="../HTML/contact.html" target="_top">Contact Us</a></li>
+                    <li><a href="../HTML/raport.html" target="_top">Raport</a></li>
                 </ul>
             </div>
         </div>
@@ -37,17 +49,9 @@
         <div class="gradina">
             <h1>Welcome to Zoo Garden</h1>
 
-            <a href="bunvenit.html">
-                <button class="button">Introduction</button>
-            </a>
+            <form action="../HTML/bunvenit.html">
+                <input type="submit" value="Let's begin" />
+            </form>
         </div>
-
-    <?php
-        }else{
-            header("Location:login.php");
-            exit();
-        }
-    ?>
-
     </body>
 </html>

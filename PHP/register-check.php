@@ -48,7 +48,7 @@
            		$sql2 = "INSERT INTO persoane (fullname, username, email, password) 
 				   VALUES ('$name','$uname', '$email', '$pass')";
            		if (mysqli_query($conn, $sql2)) {
-           	 		header("Location: Welcome.php?success=Your account has been created successfully");
+           	 		header("Location: register.php?success=Your account has been created successfully");
 	         		exit();
            		}else {
 	           		//header("Location: register.php?error=Faild to register" );

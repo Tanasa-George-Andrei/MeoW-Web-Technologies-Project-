@@ -14,11 +14,29 @@
       <div class="banner">
          <div class="navbar" id="myNavbar">
             <ul>
-                <li><a href="../PHP/login.php" target="_top">LogIn</a></li>
-                <li><a href="" target="_top">Logout</a></li>
+            <?php
+                  session_start();
+                  if(isset($_SESSION['id']) && isset($_SESSION['username'])){
+               ?>
+               <li> <img src="../Img/profile.jpg" alt=""> </li>
+               <li> <h1>Hello, <?php echo $_SESSION['username']; ?></h1> </li>
+               <li><a href="logout.php" target="_top">Logout</a></li>
+               <?php
+                  }else{
+               ?>
+               <li><a href="Login.php" target="_top">Log In</a></li>
+               <?php
+                  }
+               ?>
+
+               <?php if($_SESSION['username'] == 'admin'){?>
+                  <li><a href="adminPage.php" target="_top">AdminSection</a></li>
+               <?php
+                  }
+               ?>
             </ul>
             <ul>
-                <li><a href="../PHP/welcome.php" target="_top">Home</a></li>
+                <li><a href="../PHP/Welcome.php" target="_top">Home</a></li>
                 <li><a href="../PHP/Review.php" target="_top">Review</a></li>
                 <li><a href="../HTML/animals.html" target="_top">Animals</a></li>
                 <li><a href="../HTML/search.html" target="_top">Search</a></li>
@@ -38,41 +56,49 @@
       
             <div class="comments-info">
 
-               <div class="comments-box">
-                  <img src="../Img/profile.jpg" alt="">
-                  <div class="name"><h3>Username1</h3>
-                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptate nostrum maiores!</p>
-                  </div> 
-               </div>
+               <?php 
+               $conn = mysqli_connect("localhost", "root", "", "atlaszoologic") or die("Connection failed");
+               $query = "SELECT id, username, comment FROM review";
+               $result = $conn->query($query);
                
-               <div class="comments-box">
+               if ($result->num_rows > 0) {
+                  // output data of each row
+                  while($row = $result->fetch_assoc()) {
+            ?>
+                  <div class="comments-box">
                   <img src="../Img/profile.jpg" alt="">
-                  <div class="name"><h3>Username2</h3>
-                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptate nostrum maiores!</p>
+                  <div class="name"><h3> <?php echo $row["username"] ?> </h3>
+                     <p> <?php echo $row["comment"]; ?> </p>
                   </div> 
-               </div>
 
-               <div class="comments-box">
-                  <img src="../Img/profile.jpg" alt="">
-                  <div class="name"><h3>Username3</h3>
-                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptate nostrum maiores!</p>
-                  </div> 
+                  <?php if($_SESSION['username'] == 'admin') { ?>
+                     <div class="delete">
+                        <div class="delete" name="delete" id="delete-
+                                 <?php echo $row["id"];?>"
+                                 onclick="deleteComment(<?php echo $row['id'];?>)"> 
+                                 <button><i class="fa fa-trash-o"></i></button>
+                        </div>
+                     </div>
+                  <?php } ?>
                </div>
-
-               <div class="comments-box">
-                  <img src="../Img/profile.jpg" alt="">
-                  <div class="name"><h3>Username4</h3>
-                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae voluptate nostrum maiores!</p>
-                  </div> 
-               </div>
+            <?php          
+                  }
+                  
+              } else {
+                  echo "0 results";
+              }
+              
+              $conn->close();
+            ?>
                
             </div>
             <div id="demo"></div>
+
             <form method="POST" id="form" name="form">
                <div class="commets-container">
                   <div class="package1">
                      <img src="../Img/profile.jpg" alt="">
-                     <input type="text" placeholder="username" name="username" id="username">
+                     <input type="text" placeholder="username" name="username" id="username" value="<?php echo $_SESSION["username"] ?>">
                   </div>
                   <div class="package2">
                      <textarea name="message" id="message" rows="5" placeholder="Do you want to say something?"></textarea>
@@ -88,20 +114,44 @@
       </div>
 
       <script>
+         function deleteComment(id){
+            if(confirm('Are you sure you want to delete this comment?')){
+               $.ajax({
+                  url: "commentDeleteForm.php",
+                  type: "GET",
+                  data: 'id='+id,
+                  dataType: 'json',
+                  success: function(result) {
+                     if(result.success){
+                        $('#demo').html('<div style=color:green>'+result.message+'</div>');
+                        //window.location.href='';
+                        //load_comment();
+                     }else{
+                        $('#demo').html('<div style=color:red>**'+result.message+'</div>');
+                     }
+                  }
+               });
+            }
+         }
+
+
          $(document).ready(function(){
-            $('#form').submit(function(){
+            $('#form').on('submit', function(event){
+               event.preventDefault();
+               var form = $(this).serialize();
                $.ajax({
                   type: 'POST',
                   url: "commentForm.php",
-                  data:{
-                     username: $('#username').val(),
-                     message: $('#message').val(),
+                  data: { 
+                     username : $('#username').val(),
+                     message : $('#message').val(),
                   },
                   dataType : 'json',
-                  success: function(result){
+                  success : function(result){
                      if(result.success){
                         $('#demo').html('<div style=color:green>'+result.message+'</div>');
-                        window.location.href='';
+                        //window.location.href='';
+                        //load_comment();
                      }else{
                         $('#demo').html('<div style=color:red>**'+result.message+'</div>');
                      }
@@ -109,6 +159,17 @@
                });
                return false;
             });
+            // load_comment();
+            // function load_comment(){
+            //       $.ajax({
+            //       url:"commentLoadForm.php",
+            //       method:"POST",
+            //       success:function(result)
+            //       {
+            //       $('#display_comment').html(result);
+            //       }
+            //    })
+            // }
          });
       </script>
     </body>
