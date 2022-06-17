@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+
+.banner{
+    width: 100%;
+    height: 950px; 
+    background-image: url("../Img/animals4.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.navbar ul li img{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-bottom: -12px;
+}
+
+.navbar ul li h1{
+    color: wheat;
+    font-size: 20px;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color:white;
+    text-transform: uppercase;
+}
+
+.navbar ul li a:hover{
+    background-color: #ddd;
+    color: black;
+}
+
+.navbar a.active{
+    background-color: #04AA6D;
+    color: white;
+}
+
+.navbar .icon{
+    display: none;
+}
+
+.add-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+}
+
+
+.add-form h2{
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 40px 0;
+}
+
+.add-form input{
+    font-size: 16px;
+    padding: 15px 10px;
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    outline: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.add-form textarea{
+    border: none;
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    min-height: 200px;
+    max-height: 400px;
+    resize: vertical;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    margin-bottom: 20px
+}
+
+.add-form button {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px 0;
+    padding: 10px 15px;
+    width: 50%;
+    border: 0;
+    border-radius: 5px;
+    background-color: aliceblue;
+    cursor: pointer;
+}
+
+::selection{
+    color: #ffffff;
+    background-color: #252522;
+}
+
+@media only screen and (max-width:1060px){
+    .banner{
+        height: 1000px;
+        width: 100%;
+    }
+
+    .comments-box{
+        width: 350px;
+        padding: 10px;
+    }
+    
+    .commets-container{
+        width: 45%;
+        padding: 10px;
+    }
+
+    .name h5{
+        font-size: 10px;
+    }
+}
+@media only screen and (max-width:790px){
+    .banner{
+        height: 1067px;
+    }
+    .comments-box{
+        width: 350px;
+        font-size: 1.4rem;
+    }
+    .commets-container{
+        width: 100%;
+        margin-top: 50px;
+        font-size: 1.4rem;
+    }
+
+    .navbar ul li img{
+        margin-right: 20px;
+        margin-bottom: 0px;
+    }
+}
