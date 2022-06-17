@@ -4,10 +4,20 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+body{
+    min-height: 100vh;
+    background: url("animals4.jpg") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
 .banner{
     width: 100%;
     height: 100%;
-    background-image: url("../Img/animals4.jpg");
+    background-image: url("animals4.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -66,3 +76,11 @@ button{
     color: white;
     cursor: pointer;
 }
+
+@media screen and (max-width: 650px){
+    .gradina{
+
+        margin-top: 10rem;
+    }
+
+  }

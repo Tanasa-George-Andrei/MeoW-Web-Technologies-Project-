@@ -4,13 +4,29 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+body{
+  min-height: 100vh;
+  background: url("animals4.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .banner{
   width: 100%;
   height: 100%;
-  background-image: url("../Img/animals4.jpg");
+  background-image: url("animals4.jpg");
   background-size: cover;
   background-position: center;
 }
+
 
 .navbar{
   width: 85%;
@@ -32,44 +48,71 @@
   color:white;
   text-transform: uppercase;
 }
-  
 
-.card{
-     width: 20%;
-        background: rgb(255, 255, 255);
-        display: inline-block;
-        box-shadow: 2px 2px 20px black;   
-        border-radius: 5px; 
-        margin: 2%;
-       }
-   
-.image img{
+.grid {
+  display: grid;
+  /* width: 114em;
+  grid-gap: 6rem; */
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  align-items: start;
+  display: flex;
+  /* flex-wrap: wrap; */
+} 
+
+.grid-item {
+  width: 50%;
+  background: rgb(255, 255, 255);
+  box-shadow: 2px 2px 20px black;   
+  border-radius: 5px; 
+  margin: 2%;
+}
+
+.grid-item:hover {
+  transform: translateY(-0.5%);
+  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.5);
+}
+
+.card-img {
+  display: block;
   width: 100%;
   border-top-right-radius: 5px;
  border-top-left-radius: 5px;
-     
-   
-    
-    }
-   
-   .title{  
-     text-align: center;
-     padding: 10px;
+ object-fit: fill;
+}
 
-    }
-   
-   h1{
-     font-size: 20px;
-    }
-   
-   .des{
-     padding: 3px;
-     text-align: center;
-    
-     padding-top: 10px;
-           border-bottom-right-radius: 5px;
-     border-bottom-left-radius: 5px;
-   }
+.card-content {
+  padding: 3px;
+}
 
+.card-header {
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  /* font-weight: 500; */
+  color: #0d0d0d;
+  /* margin-bottom: 1.5rem; */
+}
+
+.card-text {
+  padding: 3px;
+  text-align: center;
+  padding-top: 10px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+
+@media only screen and (max-width: 60em) {
+  body {
+    padding: 0;
+  }
+
+  .grid {
+    justify-content: center;
+    grid-gap: 1rem;
+    flex-wrap: wrap;
+  }
+}
 
    
