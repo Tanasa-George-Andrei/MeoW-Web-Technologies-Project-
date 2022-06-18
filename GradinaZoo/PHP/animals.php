@@ -11,14 +11,14 @@
     <div class="banner">
             <div class="navbar">
                 <ul>
-                    <strong><li><a href="welcome.html">Home</a></li></strong>
-                    <strong><li><a href="review.html">Review</a></li></strong>
-                    <strong><li><a href="animals.html">Animals</a></li></strong>
-                    <strong><li><a href="about.php">About</a></li></strong>
-                    <strong><li><a href="animals.php">Animals</a></li></strong>
-                    <strong><li><a href="contact.php">Contact Us</a></li></strong>
-                    <strong><li><a href="login.html">LogIn</a></li></strong>
-                    <strong><li><a href="">Logout</a></li></strong>
+                    <strong><li><a href="../PHP/Welcome.php">Home</a></li></strong>
+                    <strong><li><a href="../PHP/Review.html">Review</a></li></strong>
+                    <strong><li><a href="search.html">Search</a></li></strong>
+                    <strong><li><a href="../PHP/about.php">About</a></li></strong>
+                    <strong><li><a href="../PHP/animals.php">Animals</a></li></strong>
+                    <strong><li><a href="../PHP/contact.php">Contact Us</a></li></strong>
+                    <strong><li><a href="../PHP/login.php">LogIn</a></li></strong>
+                    <strong><li><a href="../PHP/logout.php">Logout</a></li></strong>
                     <strong><li><a href="raport.html">Raport</a></li></strong>
                 </ul>
             </div>

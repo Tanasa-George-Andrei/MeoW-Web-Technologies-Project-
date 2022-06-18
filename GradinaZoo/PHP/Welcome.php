@@ -37,12 +37,15 @@
                 </ul>
                 <ul>
                     <div class="topnav" id="myTopnav">
-                        <li><a href="../PHP/Welcome.php">Home</a></li>
-                        <li><a href="../PHP/Review.php" target="_top">Review</a></li>
-                        <li><a href="../HTML/search.html" target="_top">Search</a></li>
-                        <li><a href="../HTML/about.html" target="_top">About</a></li>
-                        <li><a href="../HTML/contact.html" target="_top">Contact Us</a></li>
-                        <li><a href="../HTML/raport.html" target="_top">Raport</a></li>
+                    <strong><li><a href="../PHP/Welcome.php">Home</a></li></strong>
+                    <strong><li><a href="../PHP/Review.html">Review</a></li></strong>
+                    <strong><li><a href="search.html">Search</a></li></strong>
+                    <strong><li><a href="../PHP/about.php">About</a></li></strong>
+                    <strong><li><a href="../PHP/animals.php">Animals</a></li></strong>
+                    <strong><li><a href="../PHP/contact.php">Contact Us</a></li></strong>
+                    <strong><li><a href="../PHP/login.php">LogIn</a></li></strong>
+                    <strong><li><a href="../PHP/logout.php">Logout</a></li></strong>
+                    <strong><li><a href="raport.html">Raport</a></li></strong>
                     </div>
                 </ul>
             </div>
