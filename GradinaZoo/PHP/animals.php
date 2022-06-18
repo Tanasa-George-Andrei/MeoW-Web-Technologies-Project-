@@ -15,7 +15,7 @@
                     <strong><li><a href="../PHP/Review.html">Review</a></li></strong>
                     <strong><li><a href="search.html">Search</a></li></strong>
                     <strong><li><a href="../PHP/about.php">About</a></li></strong>
-                    <strong><li><a href="../PHP/animals.php">Animals</a></li></strong>
+                    <strong><li><a href="../HTML/animals.html">Animals</a></li></strong>
                     <strong><li><a href="../PHP/contact.php">Contact Us</a></li></strong>
                     <strong><li><a href="../PHP/login.php">LogIn</a></li></strong>
                     <strong><li><a href="../PHP/logout.php">Logout</a></li></strong>
@@ -29,7 +29,7 @@
     <div class="grid">
         <div class="grid-item">
         <div class="card">
-          <img class="card-img" src="mammals.jpg" alt="Mammals" />
+          <img class="card-img" src="../IMG/mammals.jpg" alt="Mammals" />
           <div class="card-content">
             <h1 class="card-header">Mammals</h1>
             <p class="card-text">
@@ -44,7 +44,7 @@
         <div class="card">
           <img
             class="card-img"
-            src="reptiles.jpg"
+            src="../IMG/reptiles.jpg"
             alt="Reptiles"
           />
           <div class="card-content">
@@ -59,7 +59,7 @@
       </div>
       <div class="grid-item">
         <div class="card">
-          <img class="card-img" src="fish.jpg" alt="Fish" />
+          <img class="card-img" src="../IMG/fish.jpg" alt="Fish" />
           <div class="card-content">
             <h1 class="card-header">Fish</h1>
             <p class="card-text">
@@ -72,7 +72,7 @@
 
       <div class="grid-item">
         <div class="card">
-          <img class="card-img" src="birds.jpg" alt="Birds" />
+          <img class="card-img" src="../IMG/birds.jpg" alt="Birds" />
           <div class="card-content">
             <h1 class="card-header">Birds</h1>
             <p class="card-text">

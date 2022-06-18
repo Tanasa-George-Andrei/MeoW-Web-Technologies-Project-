@@ -37,10 +37,10 @@
             </ul>
             <ul>
                     <strong><li><a href="../PHP/Welcome.php">Home</a></li></strong>
-                    <strong><li><a href="../PHP/Review.html">Review</a></li></strong>
+                    <strong><li><a href="../PHP/Review.php">Review</a></li></strong>
                     <strong><li><a href="search.html">Search</a></li></strong>
                     <strong><li><a href="../PHP/about.php">About</a></li></strong>
-                    <strong><li><a href="../PHP/animals.php">Animals</a></li></strong>
+                    <strong><li><a href="../HTML/animals.html">Animals</a></li></strong>
                     <strong><li><a href="../PHP/contact.php">Contact Us</a></li></strong>
                     <strong><li><a href="../PHP/login.php">LogIn</a></li></strong>
                     <strong><li><a href="../PHP/logout.php">Logout</a></li></strong>

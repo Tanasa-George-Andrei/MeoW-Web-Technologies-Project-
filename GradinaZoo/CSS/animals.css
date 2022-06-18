@@ -11,7 +11,7 @@ html {
 
 body{
   min-height: 100vh;
-  background: url("animals4.jpg") no-repeat;
+  background: url("../Img/animals4.jpg") no-repeat;
   background-size: cover;
   background-attachment: fixed;
   display: flex;
@@ -22,7 +22,7 @@ body{
 .banner{
   width: 100%;
   height: 100%;
-  background-image: url("animals4.jpg");
+  background-image: url("../Img/animals4.jpg");
   background-size: cover;
   background-position: center;
 }
