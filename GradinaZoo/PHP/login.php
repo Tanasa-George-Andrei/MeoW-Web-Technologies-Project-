@@ -1,35 +1,50 @@
-<DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/login.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
-    <title>Login</title>
-</head>
-<body>
-    
-    <div class="login-form">
-        <h1>Log In</h1>
+<?php 
+	session_start(); 
+	include "db_connect.php";
 
-        <form action="Login.php" method="POST">
-            <?php if(isset($_GET['error'])){ 
-                echo "<p class='error'>". $_GET['error']." </p>";
-                //else if(isset($_GET['success']))
-                //echo '<script>window.location = "home.php" </script>';
-            } 
-                //foreach($_GET as $val){
-                    //echo $_GET['error']==$val;
-                //}
-            ?>
-            <p>Username</p>
-            <input type="text" name="username" placeholder="Username">
-            <p>Password</p>
-            <input type="password" name="password" placeholder="Password">
-            <button value="sub">Log In</button>
-            <div class="signup-link">Not a member?<a href="register.php">Register now</a></div>
-        </form>
-    </div>
-    <footer></footer>
-</body>
-</html>
+	if (isset($_POST['username']) && isset($_POST['password'])) {
+
+		function validate($data){
+       		$data = trim($data);
+	   		$data = stripslashes($data);
+	   		$data = htmlspecialchars($data);
+	   		return $data;
+		}
+
+		$uname = validate($_POST['username']);
+		$pass = validate($_POST['password']);
+
+		if (empty($uname)) {
+			header("Location: login.php?error=User Name is required");
+	    	exit();
+		}else if(empty($pass)){
+        	header("Location: login.php?error=Password is required");
+	    	exit();
+		}else{
+			$sql = "SELECT * FROM persoane WHERE username='$uname' AND password='$pass' ";
+			$result = mysqli_query($conn, $sql); //select information from database
+
+			if (mysqli_num_rows($result) === 1) { //verify if we have the results on database
+				$row = mysqli_fetch_assoc($result); //fetches a result row as an associative array
+            	if ($row['username'] === $uname && $row['password'] === $pass) {
+            		$_SESSION['username'] = $row['username'];
+            		$_SESSION['name'] = $row['name'];
+            		$_SESSION['id'] = $row['id'];
+            		header("Location: Welcome.php");
+		        	exit();
+            	}else{
+					header("Location: login.php?error=Incorect User name or password 1" .  mysqli_connect_error());
+		        	exit();
+				}
+			}else{
+				header("Location: login.php?error=Incorect User name or password 2" . mysqli_connect_error());
+	        	exit();
+			}
+		}
+	
+	}else{
+		header("Location: login.php");
+		exit();
+	}
+
+?>

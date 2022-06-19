@@ -38,9 +38,9 @@ if (isset($_POST["date"])) {
             <strong><li><a href="animals.php">Animals</a></li></strong>
             <strong><li><a href="tickets.php">Tickets</a></li></strong>
             <strong><li><a href="contact.php">Contact Us</a></li></strong>
-            <strong><li><a href="login.html">LogIn</a></li></strong>
-            <strong><li><a href="">Logout</a></li></strong>
-            <strong><li><a href="raport.html">Raport</a></li></strong>
+            <strong><li><a href="Login.php">LogIn</a></li></strong>
+            <strong><li><a href="logout.php">Logout</a></li></strong>
+            <strong><li><a href="../raport.html">Raport</a></li></strong>
         </ul>
     </div>
     <br>
