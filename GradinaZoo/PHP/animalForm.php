@@ -7,16 +7,16 @@
 
     if (isset($_POST['name']) && isset($_POST['class']) && isset($_POST['description'])){
         if (empty($name)) {
-			header("Location: register.php?error=Full name is required");
+			header("Location: register.php?error=Name is required");
 	    	exit();
 		}else if(empty($class)){
-        	header("Location: register.php?error=Username is required");
+        	header("Location: register.php?error=Class is required");
 	    	exit();
 		}else if(empty($description)){
-        	header("Location: register.php?error=Email is required");
+        	header("Location: register.php?error=Description is required");
 	    	exit();
 		}else{
-            $sql = "INSERT INTO animal (name, class, description) 
+            $sql = "INSERT INTO animals (name, class, description) 
 				        VALUES ('$name','$class', '$description')";
             if (mysqli_query($conn, $sql)) {
                 header("Location: addNewAnimal.php?success=The new animal was added successfully");

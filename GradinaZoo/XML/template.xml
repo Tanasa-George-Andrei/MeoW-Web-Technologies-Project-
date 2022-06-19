@@ -1,0 +1,21 @@
+<animal>
+    <entry>
+        <name></name>
+        <scientific_name></scientific_name>
+        <main_image></main_image>
+        <attributes>
+            <attribute>
+                <type></type>
+                <value></value>
+            </attribute>
+        </attributes>
+    </entry>
+    <galery>
+        <image>
+            <name></name>
+            <path></path>
+        </image>
+    </galery>
+    <short_description></short_description>
+    <info></info>
+</animal>

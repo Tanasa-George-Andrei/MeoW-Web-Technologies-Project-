@@ -50,24 +50,26 @@
             </ul>
         </div>
         
-        <!-- Table of Users -->
+        <!-- Table of Animals -->
         <div class="table">
             <div class="table_header">
-                <p>Users details</p>
-                    <form action="../PHP/adminSearchForm.php" method="GET">
-                        <input type="text" name="search" id="search" placeholder="Search for a user">
-                        <button class="search" type="submit" onclick="console.log('am dat click')"><i class="fa fa-search"></i></button>
-                        <div id="output"></div>
-                    </form>
+                <form action="../PHP/addNewAnimal.php">
+                    <input type="submit" value="Add animal" />
+                </form>
+                <p>Animal details</p>
+                <form action="../PHP/adminSearchAnimalForm.php" method="GET">
+                    <input type="text" name="search" id="search" placeholder="Search for an animal">
+                    <button class="search" type="submit"><i class="fa fa-search"></i></button>
+                    <div id="output"></div>
+                </form>
             </div>
-        </div>
         
         <div class="table_section">
         <?php
             $conn = mysqli_connect("localhost", "root", "", "atlaszoologic") or die("Connection failed");
             if(isset($_GET['search'])) {
                 $search = $_GET['search'];
-                $search_query = "SELECT * FROM persoane WHERE CONCAT(fullname, username) LIKE '%$search%' ";
+                $search_query = "SELECT * FROM animals WHERE CONCAT(name, class) LIKE '%$search%' ";
                 $res = $conn->query($search_query);
                 
                 if($res) {
@@ -77,11 +79,9 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Profile Photo</th>
-                        <th>Fullname</th>
-                        <th>Username</th>
-                        <th>Email</th>
-                        <th>Password</th>
+                        <th>Name</th>
+                        <th>Class</th>
+                        <th>Description</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -90,24 +90,25 @@
                 <?php
                     while($row = $res->fetch_assoc()) {
                         $id = $row['id'];
-                        $fullname = $row['fullname'];
-                        $username = $row['username'];
-                        $email = $row['email'];
-                        $password = $row['password'];
+                        $name = $row['name'];
+                        $class = $row['class'];
+                        $description = $row['description'];
                 ?>
                     <tr>
                         <td> <?php echo $id; ?> </td>
-                        <td><img src="../Img/profile.jpg" alt=""></td>
-                        <td> <?php echo $fullname; ?> </td>
-                        <td> <?php echo $username; ?> </td>
-                        <td> <?php echo $email; ?> </td>
-                        <td> <?php echo $password; ?> </td>
+                        <td> <?php echo $name; ?> </td>
+                        <td> <?php echo $class; ?> </td>
+                        <td> <?php echo $description; ?> </td>
                         <td>
                             <div class="delete" name="delete" id="delete-
                             <?php echo $row["id"];?>"
-                            onclick="deleteUser(<?php echo $row['id'];?>)"> 
+                            onclick="deleteAnimal(<?php echo $row['id'];?>)"> 
                             <button><i class="fa fa-trash-o"></i></button>
                             </div>
+                            <form action="../PHP/animalUpdateForm.php?" metod="POST">
+                                <input type="hidden" name="id" value="<?= $row["id"];?>"> 
+                                <button><i class="fa fa-edit"></i></button>
+                            </form>
                         </td>
                     </tr>
 
@@ -115,7 +116,7 @@
                         }
                      }
                     }else{
-                        echo 'The user not found.';
+                        echo 'The animal not found.';
                     }
                 }
         
@@ -126,29 +127,26 @@
     </div>
 
     <script>
-        function deleteUser(id){
+            function deleteAnimal(id){
             if(confirm('Are you sure you want to delete this user?')){
-                $.ajax({
-                    url: "userDeleteForm.php",
-                    type: "GET",
-                    data: 'id='+id,
-                    dataType: 'json',
-                    success: function(result) {
-                        if(result.success){
-                            // $('#demo').html('<div style=color:green>'+result.message+'</div>');
-                            alert(result.message);
-                        }else{
-                            // $('#demo').html('<div style=color:red>**'+result.message+'</div>');
-                            alert(result.message);
-                        }
-                    },
-                    error: function(jqXhr, textStatus, errorMessage){
-                        alert(errorMessage, textStatus);
-                    }
-                });
+               $.ajax({
+                  url: "animalDeleteForm.php",
+                  type: "GET",
+                  data: 'id='+id,
+                  dataType: 'json',
+                  success: function(result) {
+                     if(result.success){
+                        $('#demo').html('<div style=color:green>'+result.message+'</div>');
+                        //window.location.href='';
+                        //load_comment();
+                     }else{
+                        $('#demo').html('<div style=color:red>**'+result.message+'</div>');
+                     }
+                  }
+               });
             }
-        }
-    </script>
+         }
+        </script>
 
 </body>
 </html>

@@ -36,15 +36,13 @@
                ?>
             </ul>
             <ul>
-                    <strong><li><a href="../PHP/Welcome.php">Home</a></li></strong>
-                    <strong><li><a href="../PHP/Review.php">Review</a></li></strong>
-                    <strong><li><a href="search.html">Search</a></li></strong>
-                    <strong><li><a href="../PHP/about.php">About</a></li></strong>
-                    <strong><li><a href="../HTML/animals.html">Animals</a></li></strong>
-                    <strong><li><a href="../PHP/contact.php">Contact Us</a></li></strong>
-                    <strong><li><a href="../PHP/login.php">LogIn</a></li></strong>
-                    <strong><li><a href="../PHP/logout.php">Logout</a></li></strong>
-                    <strong><li><a href="raport.html">Raport</a></li></strong>
+                <li><a href="../PHP/Welcome.php" target="_top">Home</a></li>
+                <li><a href="../PHP/Review.php" target="_top">Review</a></li>
+                <li><a href="../HTML/animals.html" target="_top">Animals</a></li>
+                <li><a href="../HTML/search.html" target="_top">Search</a></li>
+                <li><a href="../HTML/about.html" target="_top">About</a></li>
+                <li><a href="../HTML/wiki.html" target="_top">Wiki</a></li>
+                <li><a href="../HTML/raport.html" target="_top">Raport</a></li>
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
             </ul>
          </div>

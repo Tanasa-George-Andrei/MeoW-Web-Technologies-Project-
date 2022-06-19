@@ -11,7 +11,6 @@ if($_SESSION['username'] == 'admin'){}
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../CSS/adminPage.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <title>Admin</title>
     </head>
@@ -54,9 +53,9 @@ if($_SESSION['username'] == 'admin'){}
             <div class="table">
                 <div class="table_header">
                     <p>Users details</p>
-                        <form action="" method="GET">
+                        <form action="../PHP/adminSearchForm.php" method="GET">
                             <input type="text" name="search" id="search" placeholder="Search for a user">
-                            <button class="search" type="submit"><i class="fa fa-search"></i></button>
+                            <button class="search" type="submit" onclick="console.log('am dat click')"><i class="fa fa-search"></i></button>
                             <div id="output"></div>
                         </form>
                 </div>
@@ -83,7 +82,6 @@ if($_SESSION['username'] == 'admin'){}
                             if ($result->num_rows > 0) {
                                 // output data of each row
                                 while($row = $result->fetch_assoc()) {
-                                    for($i = 0; $i < $result->num_rows/8; $i++) {
                         ?>
                             <tr>
                                 <td> <?php echo $row["id"]; ?> </td>
@@ -102,7 +100,6 @@ if($_SESSION['username'] == 'admin'){}
                             </tr>
 
                         <?php          
-                                    }
                                 }
                                     
                             }else {
@@ -115,18 +112,44 @@ if($_SESSION['username'] == 'admin'){}
                     </table>
                 </div>
             </div>
+            
             <div class="pagination">
                 <form action="../PHP/adminPage.php">
-                        <input type="submit" value="1" />
+                        <input type="submit" value="User page" />
                 </form>
                 <form action="../PHP/adminAnimalPage.php">
-                        <input type="submit" value="2" />
+                        <input type="submit" value="Animal page" />
                 </form>
             </div>
         </div>
 
         <script>
             function deleteUser(id){
+                if(confirm('Are you sure you want to delete this user?')){
+                    $.ajax({
+                        url: "userDeleteForm.php",
+                        type: "GET",
+                        data: 'id='+id,
+                        dataType: 'json',
+                        success: function(result) {
+                            if(result.success){
+                                // $('#demo').html('<div style=color:green>'+result.message+'</div>');
+                                alert(result.message);
+                            }else{
+                                // $('#demo').html('<div style=color:red>**'+result.message+'</div>');
+                                alert(result.message);
+                            }
+                        },
+                        error: function(jqXhr, textStatus, errorMessage){
+                            alert(errorMessage, textStatus);
+                        }
+                    });
+                }
+         }
+        </script>
+
+        <script>
+            function searchUser(id){
             if(confirm('Are you sure you want to delete this user?')){
                $.ajax({
                   url: "userDeleteForm.php",
@@ -147,30 +170,5 @@ if($_SESSION['username'] == 'admin'){}
          }
         </script>
 
-         <script type = "text/javascript">
-            $(document).ready(function() {
-                $("#search").keyup(function(){
-                    search_table($(this).val());
-
-                });
-
-                function search_table(value) {
-                    $('#myTable tr').each(function(){
-                        var found = 'false';
-                        $(this).each(function(){
-                            if($(this).text().toLocaleLowerCase().indexOf(value.toLocaleLowerCase()) >= 0)
-                            {
-                                found = 'true';
-                            }
-                        });
-                        if($found == 'true'){
-                            $(this).show();
-                        }else{
-                            $(this).hide();
-                        }
-                    })
-                }
-            });
-        </script>
     </body>
 </html>

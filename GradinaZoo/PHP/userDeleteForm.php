@@ -14,6 +14,7 @@ if(isset($_GET['id']) & !empty($_GET['id'])) {
         $json = ['error' => TRUE, ' message' => 'The user could not be deleted'];
         header("Location:adminPage.php");
     }
+    echo $result;
 
     mysqli_close($conn);
     echo json_encode($json);
