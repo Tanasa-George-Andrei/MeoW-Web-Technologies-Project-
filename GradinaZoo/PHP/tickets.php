@@ -31,11 +31,12 @@ if (isset($_POST["date"])) {
   <div class="banner">
     <div class="navbar">
         <ul>
-            <strong><li><a href="welcome.html">Home</a></li></strong>
-            <strong><li><a href="review.html">Review</a></li></strong>
-            <strong><li><a href="search.html">Search</a></li></strong>
+            <strong><li><a href="Welcome.php">Home</a></li></strong>
+            <strong><li><a href="Review.php">Review</a></li></strong>
+            <strong><li><a href="search.php">Search</a></li></strong>
             <strong><li><a href="about.php">About</a></li></strong>
             <strong><li><a href="animals.php">Animals</a></li></strong>
+            <strong><li><a href="tickets.php">Tickets</a></li></strong>
             <strong><li><a href="contact.php">Contact Us</a></li></strong>
             <strong><li><a href="login.html">LogIn</a></li></strong>
             <strong><li><a href="">Logout</a></li></strong>
@@ -61,8 +62,8 @@ if (isset($_POST["date"])) {
           <input type="text" name="name" class="text-box" placeholder="Name" required>
           <input type="email" name="email" class="text-box" placeholder="Email" required>
           <input type="phone" name="phone" class="text-box" placeholder="Phone number" required>
-          <input type="date" name="date" class="text-box" required="" id="res_date" name="date" value="2022-06-18">
-
+          <!-- <input type="date" name="date" class="text-box" required="" id="res_date" name="date" value="2022-06-18"> -->
+          <input type="date" name="date" class="data-box" required="" id="res_date" name="date" value="2022-06-18">
 
           <div class="select">
           <select name="slot">
@@ -70,14 +71,19 @@ if (isset($_POST["date"])) {
           <option value="normal">Normal ticket</option>
           <option value="weekend">Weekend ticket</option>
           <option value="kids">Kids ticket</option>
-
           </select>
+          <!-- <label for="slot"> Slot </label>
+          <select id="slot">
+          <option selected disabled>Choose a ticket type</option>
+          <option value="normal">Normal ticket</option>
+          <option value="weekend">Weekend ticket</option>
+          <option value="kids">Kids ticket</option>
+          </select>     -->
           </div>
 
           <input type="submit" name="submit" class="send-btn" value="Buy">
         </form>
       </div>
-
     </div>
   </div>
   <script type="text/javascript">

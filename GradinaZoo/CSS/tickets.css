@@ -99,7 +99,26 @@
     margin-right: 15px;
   }
 
-  .contact-form .select{
+  .contact-form .data-box{
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: none;
+    width: calc(50% - 10px);
+    height: 50px;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    margin-left: 15px;
+    opacity: 0.9;
+  }
+  
+  .contact-form .data-box:first-child{
+    margin-right: 15px;
+  }
+
+  .contact-form select {
     background: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     border: none;
@@ -111,10 +130,15 @@
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     opacity: 0.9;
-  }
-  .contact-form .select:first-child{
+  } 
+
+  .contact-form select:first-child{
     margin-right: 15px;
   }
+ 
+  .select::-ms-expand {
+    display: none;
+  } 
   
   .contact-form textarea{
     background: rgb(255, 255, 255);
@@ -153,8 +177,6 @@
     background: #e39205;
   }
 
-
-
   @media screen and (max-width: 950px){
     .contact-section{
       flex-direction: column;
@@ -171,6 +193,17 @@
     .contact-form .text-box{
       width: 100%;
     }
+
+    .contact-form .data-box{
+      width: 100%;
+      margin-left: 0;
+
+    }
+
+    .contact-form select{
+      width: 100%;
+    }
+
   }
   
   /*css for alert messages*/

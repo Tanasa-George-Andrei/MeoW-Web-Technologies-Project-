@@ -35,9 +35,12 @@ class Reservation {
       $this->error = $ex->getMessage();
       return false;
     }
+    
+    // $to = "mihnea.radu@yahoo.com";
     // $subject = "Reservation Received";
     // $message = "Thank you, we have received your request and will process it shortly.";
-    // @mail($email, $subject, $message);
+    // $headers = "Content-type: text/html\r\n";
+    // @mail($email, $subject, $message, $headers);
     return true;
   }
   
