@@ -1,23 +1,4 @@
-<?php
-
-$alert = '';
-
-if (isset($_POST["date"])) {
-  require "reserve.php";
-  if ($_RSV->save(
-    $_POST["date"], $_POST["slot"], $_POST["name"],
-    $_POST["email"], $_POST["phone"])) {
-    //  echo "<div class='ok'>Reservation saved.</div>";
-    $alert = '<div class="alert-success">
-    <span>Ticket buyed! Thank you for your receipt!</span>
-   </div>';
-  } else { 
-    $alert = '<div class="alert-error">
-    <span>'.$_RSV->error.'</span>
-    </div>';
-  }
-  }
-?>
+<?php include 'tickets_db.php'; ?>
 
 <html lang="en"><head>
   <meta charset="UTF-8">
