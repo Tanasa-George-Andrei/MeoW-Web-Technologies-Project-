@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&amp;display=swap" rel="stylesheet">
 
   </script>
-  <script src="form.js"></script>
+  <!-- <script src="form.js"></script> -->
   <title>Contact Us</title>
 </head>
 <body>
@@ -34,7 +34,7 @@
      <?php echo $alert; ?>
     <!--alert messages end-->
     <div class="contact-section">
-      <div class="contact-info">
+    <div class="contact-info">
         <div><i class="fas fa-map-marker-alt"></i>Adress: Carol I Boulevard, no.48, Iași, Romania</div>
         <div><i class="fas fa-envelope"></i>Email: zoo_iasi@yahoo.com</div>
         <div><i class="fas fa-phone"></i>Phone: 0760 132 546</div>
@@ -49,7 +49,6 @@
           <input type="submit" name="submit" class="send-btn" value="Send">
         </form>
       </div>
-
     </div>
   </div>
   <script type="text/javascript">

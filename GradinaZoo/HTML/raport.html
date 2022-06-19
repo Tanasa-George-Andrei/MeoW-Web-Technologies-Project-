@@ -56,7 +56,7 @@
       </section>
       <section id="search">
         
-        <h5><span>2.2 </span><a href="GradinaZoo/HTML/search.html">Pagina Search</a></h5>
+        <h5><span>2.2 </span><a href="../PHP/search.php">Pagina Search</a></h5>
         
         <p>
           Pagina Search este punctul de start pentru a accesa intregul catalog de informati despre animalele din gradina ZOO. Aceasta pagina este compusa din trei sectiuni. Prima sectiune este compusa din bara de Search si meniul pliabil Advanced care contine toate filtrele pentru o cautare cat mai usoara in catalog. Dar pentru utilizatori mai avansati mai oferim si capabilitatea de a cauta fuzzy fara filtre in catalogul nostru prin scrierea tag-ului specific intre "<>". A doua sectiune este compusa dintr-un carusel de imagini ale celor mai cautate animale ale gradini ZOO, fiecare imagie fiind un link catre pagina Wiki a animalului respectiv. A treia sectiune contine catalogul intreg de animale al gradini ZOO sub forma unei liste de imagini infinite cu posibilitatea pentru utilizator de a alege metoda de sortare, fiecare imagine reprezinta un link catre pagina de Wiki a animalului aratat in imagine.<br>
@@ -66,7 +66,7 @@
       </section>
       <section id="wiki">
         
-        <h6><span>2.3 </span><a href="GradinaZoo/HTML/wiki.html">Pagina Wiki</a></h6>
+        <h6><span>2.3 </span><a href="../HTML/wiki.html">Pagina Wiki</a></h6>
         <p>
           Pagina Wiki contine toate informatiile despre animalul dorit vizualizari. Aceasta este impartita in doua coloane. Colana din stanga contine o imagine cu animalul, numele normal/popular si numele stintific al acestuai. Colana din dreapta contine toate informatiile despre animal separata in sectiuni relaventate, personalizate pentur fiecare categorie de animal.<br>  
           Daca permite timpul se va implementa un sistem de votare similar Reddit pentru fiecare animal si animalele cu cel mai mare scor vor fi afisate pe pagina de search in carusel. Dar va mai fi folosit si pentru sortarea animaleleor in sectiune de catalog a pagini Search<br>
@@ -86,11 +86,11 @@
         
       <section id="contact">
         
-        <h8><span>2.5 <a href="GradinaZoo/HTML/contact.html">Pagina Contact Us</a></h8>
+        <h8><span>2.5 <a href="../PHP/contact.php">Pagina Contact Us</a></h8>
         <p>
           Pagina Contact Us este o pagină cu ajutorul căreia utilizatorul poate comunica cu echipa care administrează situl. Această pagină este structurată în două sub-pagini: 
             1. Prima sub-pagină este formată din patru câmpuri ce contin informații despre adresa grădinii zoologice, numărul de telefon al acesteia, adresa de email unde poate fi găsita administratorul sitului și programul grădinii zoologice. Am ales să folosesc un font Gill Sans, cu textul de culoare albă deoarece informația trebuie să fie citită cu ușurință de către cel care vizitează situl.
-            2. A doua sub-pagină conține tot 3 câmpuri, care trebuie completate de către utilitor, acestea fiind numele, adresa de email și mesajul pe care acesta dorește să-l transmita către administrator. Completarea câmpurilor pentru utilizator și email trebuie să fie facută cu valorile care sunt în baza de date, acestea fiind verificate și pe baza unei interogări a bazei de date cu aceste valori, se realizează transmiterea mesajului. Dacă aceste informații nu se regăsesc în baza de date, se va returna un mesaj de eroare. Am ales să folosesc un font Gill Sans, cu textul de culoare gri și un chenar transparent deoarece informația trebuie să fie citită cu ușurință de către cel care vizitează situl.<br>
+            2. A doua sub-pagină conține tot 3 câmpuri, care trebuie completate de către utilitor, acestea fiind numele, adresa de email și mesajul pe care acesta dorește să-l transmita către administrator. Am ales să folosesc un font Gill Sans, cu textul de culoare gri și un chenar transparent deoarece informația trebuie să fie citită cu ușurință de către cel care vizitează situl.<br>
           Autor: Costin Mihnea-Radu - grupa 2B2
         </p>
         
@@ -98,7 +98,7 @@
 
       <section id="about">
           
-        <h9><span>2.6 <a href="GradinaZoo/HTML/about.html">Pagina About Us</a></h9>
+        <h9><span>2.6 <a href="../PHP/about.php">Pagina About Us</a></h9>
         <p>
           Pagina About Us este o alta pagină din bara principală de meniu ce poate fi accesată oricând. Aici, utilizatorul poate afla informații despre Grădina Zoologică și despre angajații acesteia. Dacă utiizatorul dorește să transmită un mesaj către Grădina Zoologică, trebuie să acceseze butonul de Contact, care-l va redirecționa spre pagina Contact Us. Am ales să împart informația pe o singură coloană în două părți, folosind fontul Gill Sans deoarece informația poate fi citită cu ușurință de către orice utilizator.  <br>
           Autor: Costin Mihnea-Radu - grupa 2B2
@@ -127,15 +127,28 @@
         
       </section>
           
-      <section id="register">
+      <section id="animals">
         
-       <h12><span>2.9 <a href="GradinaZoo/HTML/animals.html">Pagina Animals</a></h12>
+       <h12><span>2.9 <a href="../PHP/animals.php">Pagina Animals</a></h12>
        <p>
          Pagina Animals ne oferă informații legate clasele de animale care se regăsesc în colecția grădinii zoologice. Acestea sunt afișate sub forma unor carduri, în interiorul cărora se află o imagine a unui animal aparținând clasei respective, numele clasei și câteva informații atât despre aceasta, cât și despre numărul de specii care se regăsesc în grădina zoologică aparținând clasei. Chenarul unde am introdus textul are backround de culoare albă, iar textul are culoare neagră, cu font Gill Sans. Am optat această formatare deoarece în acest fel, informația este ușor vizibilă pentru utilizatori, scrisul fiind suficient de vizibil. Imaginile sunt clare și reprezentative pentru clasa din care fac parte, fiind ușor pentru cei care accesează să recunoască animalul din poză.  <br>
          Autor: Costin Mihnea-Radu - grupa 2B2
        </p>
     
-          </section>
+      </section>
+
+      <section id="tickets">
+        
+        <h8><span>2.10 <a href="../PHP/tickets.php">Pagina Tickets</a></h8>
+        <p>
+          Pagina Tickets este o pagină prin intermediul căreia pot fi achiziționate bilete pentru vizitarea grădinii zoologice. Această pagină este structurată în două sub-pagini: 
+            1. Prima sub-pagină este formată din patru câmpuri ce contin informații despre tipurile de bilete ce pot fi achiziționate. Am ales să folosesc un font Gill Sans, cu textul de culoare albă deoarece informația trebuie să fie citită cu ușurință de către cel care vizitează situl.
+            2. A doua sub-pagină conține 5 câmpuri, care trebuie completate de către utilitor, acestea fiind numele, adresa de email, numărul de telefon, data rezervării și tipul de bilet ales. După ce au fost completate datele, pagina va afișa un mesaj de confirmare, iar informațiile furnizate vor fi adăugate în baza de date a grădinii zoologice. Am ales să folosesc un font Gill Sans, cu textul de culoare gri și un chenar transparent deoarece informația trebuie să fie citită cu ușurință de către cel care vizitează situl.<br>
+          Autor: Costin Mihnea-Radu - grupa 2B2
+        </p>
+        
+      </section>
+
       <section id="lucru">
         
         <h13><span>3. </span>Membrii echipei</h13>

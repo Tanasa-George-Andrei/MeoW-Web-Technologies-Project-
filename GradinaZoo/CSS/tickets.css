@@ -18,7 +18,7 @@
   .banner{
     width: 100%;
     height: 100%;
-    background-image: url("../Img/animals4.jpg");
+    background-image: url("animals4.jpg");
     background-size: cover;
     background-position: center;
   }
@@ -179,7 +179,7 @@
 
   @media screen and (max-width: 950px){
     .contact-section{
-      flex-direction: column;
+      flex-direction: column-reverse;
     }
   
     .contact-info, .contact-form{
