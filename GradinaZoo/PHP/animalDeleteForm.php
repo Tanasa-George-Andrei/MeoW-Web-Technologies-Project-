@@ -4,7 +4,7 @@ $json = [];
 if(isset($_GET['id']) & !empty($_GET['id'])) {
     $id = $_GET['id'];
 
-    $delete = "DELETE FROM animal WHERE id = '$id' ";
+    $delete = "DELETE FROM animals WHERE id = '$id' ";
     $result = mysqli_query($conn, $delete);
 
     if($result){
