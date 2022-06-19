@@ -15,33 +15,16 @@
     <div class="banner">
         <div class="navbar">
             <ul>
-                <strong>
-                    <li><a href="../PHP/Welcome.php">Home</a></li>
-                </strong>
-                <strong>
-                    <li><a href="../PHP/Review.html">Review</a></li>
-                </strong>
-                <strong>
-                    <li><a href="search.html">Search</a></li>
-                </strong>
-                <strong>
-                    <li><a href="../PHP/about.php">About</a></li>
-                </strong>
-                <strong>
-                    <li><a href="../PHP/animals.php">Animals</a></li>
-                </strong>
-                <strong>
-                    <li><a href="../PHP/contact.php">Contact Us</a></li>
-                </strong>
-                <strong>
-                    <li><a href="../PHP/login.php">LogIn</a></li>
-                </strong>
-                <strong>
-                    <li><a href="../PHP/logout.php">Logout</a></li>
-                </strong>
-                <strong>
-                    <li><a href="raport.html">Raport</a></li>
-                </strong>
+            <strong><li><a href="Welcome.php">Home</a></li></strong>
+            <strong><li><a href="Review.php">Review</a></li></strong>
+            <strong><li><a href="search.php">Search</a></li></strong>
+            <strong><li><a href="about.php">About</a></li></strong>
+            <strong><li><a href="animals.php">Animals</a></li></strong>
+            <strong><li><a href="tickets.php">Tickets</a></li></strong>
+            <strong><li><a href="contact.php">Contact Us</a></li></strong>
+            <strong><li><a href="Login.php">LogIn</a></li></strong>
+            <strong><li><a href="logout.php">Logout</a></li></strong>
+            <strong><li><a href="../HTML/raport.html">Raport</a></li></strong>
             </ul>
         </div>
     </div>

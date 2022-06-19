@@ -40,7 +40,7 @@ if (isset($_POST["date"])) {
             <strong><li><a href="contact.php">Contact Us</a></li></strong>
             <strong><li><a href="Login.php">LogIn</a></li></strong>
             <strong><li><a href="logout.php">Logout</a></li></strong>
-            <strong><li><a href="../raport.html">Raport</a></li></strong>
+            <strong><li><a href="../HTML/raport.html">Raport</a></li></strong>
         </ul>
     </div>
     <br>

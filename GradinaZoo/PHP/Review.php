@@ -36,14 +36,17 @@
                ?>
             </ul>
             <ul>
-                <li><a href="../PHP/Welcome.php" target="_top">Home</a></li>
-                <li><a href="../PHP/Review.php" target="_top">Review</a></li>
-                <li><a href="../HTML/animals.html" target="_top">Animals</a></li>
-                <li><a href="../HTML/search.html" target="_top">Search</a></li>
-                <li><a href="../HTML/about.html" target="_top">About</a></li>
-                <li><a href="../HTML/wiki.html" target="_top">Wiki</a></li>
-                <li><a href="../HTML/raport.html" target="_top">Raport</a></li>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+            <strong><li><a href="Welcome.php">Home</a></li></strong>
+            <strong><li><a href="Review.php">Review</a></li></strong>
+            <strong><li><a href="search.php">Search</a></li></strong>
+            <strong><li><a href="about.php">About</a></li></strong>
+            <strong><li><a href="animals.php">Animals</a></li></strong>
+            <strong><li><a href="tickets.php">Tickets</a></li></strong>
+            <strong><li><a href="contact.php">Contact Us</a></li></strong>
+            <strong><li><a href="Login.php">LogIn</a></li></strong>
+            <strong><li><a href="logout.php">Logout</a></li></strong>
+            <strong><li><a href="../HTML/raport.html">Raport</a></li></strong>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
             </ul>
          </div>
       
