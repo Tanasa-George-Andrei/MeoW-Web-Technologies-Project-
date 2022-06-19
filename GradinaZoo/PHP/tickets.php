@@ -47,7 +47,7 @@
           <input type="date" name="date" class="data-box" required="" id="res_date" name="date" value="2022-06-18">
 
           <div class="select">
-          <select name="slot">
+          <select name="ticket">
           <option selected disabled>Choose a ticket type</option>
           <option value="normal">Normal ticket</option>
           <option value="weekend">Weekend ticket</option>

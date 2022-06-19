@@ -16,7 +16,6 @@ class Connection {
     } catch (Exception $ex) { exit($ex->getMessage()); }
   }
 
-  
 
   // (B) DESTRUCTOR - CLOSE DATABASE CONNECTION
   function __destruct() {
@@ -28,7 +27,7 @@ class Connection {
   function save ($name, $email, $message) {
     try {
       $this->stmt = $this->pdo->prepare(
-        "INSERT INTO `mails` (`res_name`, `res_email`, `res_message`) VALUES (?,?,?)"
+        "INSERT INTO `mails` (`name`, `email`, `message`) VALUES (?,?,?)"
       );
       $this->stmt->execute([$name, $email, $message]);
     } catch (Exception $ex) {

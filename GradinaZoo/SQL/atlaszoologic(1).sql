@@ -93,11 +93,11 @@ INSERT INTO `review` (`id`, `username`, `comment`, `date`) VALUES
 --
 
 CREATE TABLE `tickets` (
-  `res_date` date NOT NULL,
-  `res_name` varchar(256) NOT NULL,
-  `res_email` varchar(256) NOT NULL,
-  `res_slot` varchar(256) NOT NULL,
-  `res_tel` varchar(20) NOT NULL
+  `date` date NOT NULL,
+  `name` varchar(256) NOT NULL,
+  `email` varchar(256) NOT NULL,
+  `ticket` varchar(256) NOT NULL,
+  `phone` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -105,9 +105,9 @@ CREATE TABLE `tickets` (
 --
 
 CREATE TABLE `mails` (
-  `res_name` varchar(256) NOT NULL,
-  `res_email` varchar(256) NOT NULL,
-  `res_message` varchar(5000) NOT NULL,
+  `name` varchar(256) NOT NULL,
+  `email` varchar(256) NOT NULL,
+  `message` varchar(5000) NOT NULL,
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --

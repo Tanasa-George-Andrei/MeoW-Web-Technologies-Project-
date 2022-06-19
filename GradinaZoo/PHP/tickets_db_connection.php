@@ -1,5 +1,5 @@
 <?php
-class Reservation {
+class Connection {
   // (A) CONSTRUCTOR - CONNECT TO DATABASE
   private $pdo; // PDO object
   private $stmt; // SQL statement
@@ -28,9 +28,9 @@ class Reservation {
   function save ($date, $slot, $name, $email, $phone) {
     try {
       $this->stmt = $this->pdo->prepare(
-        "INSERT INTO `tickets` (`res_date`, `res_slot`, `res_name`, `res_email`, `res_tel`) VALUES (?,?,?,?,?)"
+        "INSERT INTO `tickets` (`date`, `ticket`, `name`, `email`, `phone`) VALUES (?,?,?,?,?)"
       );
-      $this->stmt->execute([$date, $slot, $name, $email, $phone]);
+      $this->stmt->execute([$date, $ticket, $name, $email, $phone]);
     } catch (Exception $ex) {
       $this->error = $ex->getMessage();
       return false;
@@ -47,9 +47,9 @@ class Reservation {
 }
 
 define("DB_HOST", "localhost");
-define("DB_NAME", "zoo");
+define("DB_NAME", "atlaszoologic");
 define("DB_CHARSET", "utf8");
 define("DB_USER", "user");
 define("DB_PASSWORD", "password");
 
-$_RSV = new Reservation();
+$_RSV = new Connection();

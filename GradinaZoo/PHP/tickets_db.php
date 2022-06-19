@@ -3,7 +3,7 @@
 $alert = '';
 
 if (isset($_POST["date"])) {
-  require "reserve.php";
+  require "tickets_db_connection.php";
   if ($_RSV->save(
     $_POST["date"], $_POST["slot"], $_POST["name"],
     $_POST["email"], $_POST["phone"])) {
