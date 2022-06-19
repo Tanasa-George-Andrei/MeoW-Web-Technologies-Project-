@@ -36,17 +36,14 @@
                ?>
             </ul>
             <ul>
-            <strong><li><a href="Welcome.php">Home</a></li></strong>
-            <strong><li><a href="Review.php">Review</a></li></strong>
-            <strong><li><a href="search.php">Search</a></li></strong>
-            <strong><li><a href="about.php">About</a></li></strong>
-            <strong><li><a href="animals.php">Animals</a></li></strong>
-            <strong><li><a href="tickets.php">Tickets</a></li></strong>
-            <strong><li><a href="contact.php">Contact Us</a></li></strong>
-            <strong><li><a href="Login.php">LogIn</a></li></strong>
-            <strong><li><a href="logout.php">Logout</a></li></strong>
-            <strong><li><a href="../HTML/raport.html">Raport</a></li></strong>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+                <li><a href="../PHP/Welcome.php" target="_top">Home</a></li>
+                <li><a href="../PHP/Review.php" target="_top">Review</a></li>
+                <li><a href="../HTML/animals.html" target="_top">Animals</a></li>
+                <li><a href="../HTML/search.html" target="_top">Search</a></li>
+                <li><a href="../HTML/about.html" target="_top">About</a></li>
+                <li><a href="../HTML/wiki.html" target="_top">Wiki</a></li>
+                <li><a href="../HTML/raport.html" target="_top">Raport</a></li>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
             </ul>
          </div>
       
@@ -99,7 +96,7 @@
             </div>
             <div id="demo"></div>
 
-            <form method="POST" id="form" name="form">
+            <form method="POST" id="form" name="form" action="commentForm.php">
                <div class="commets-container">
                   <div class="package1">
                      <img src="../Img/profile.jpg" alt="">
@@ -109,7 +106,7 @@
                      <textarea name="message" id="message" rows="5" placeholder="Do you want to say something?"></textarea>
                   </div>
                   <div class="package3">
-                     <input type="submit" class="send-btn" value="Send" name="post">
+                     <input type="submit" class="send-btn" value="Send" name="post" >
                   </div>
                </div>
             </form>
@@ -121,49 +118,88 @@
       <script>
          function deleteComment(id){
             if(confirm('Are you sure you want to delete this comment?')){
-               $.ajax({
-                  url: "commentDeleteForm.php",
-                  type: "GET",
-                  data: 'id='+id,
-                  dataType: 'json',
-                  success: function(result) {
-                     if(result.success){
-                        $('#demo').html('<div style=color:green>'+result.message+'</div>');
-                        //window.location.href='';
-                        //load_comment();
-                     }else{
-                        $('#demo').html('<div style=color:red>**'+result.message+'</div>');
-                     }
-                  }
-               });
+               // $.ajax({
+               //    url: "commentDeleteForm.php",
+               //    type: "GET",
+               //    data: 'id='+id,
+               //    dataType: 'json',
+               //    success: function(result) {
+               //       if(result.success){
+               //          $('#demo').html('<div style=color:green>'+result.message+'</div>');
+               //          //window.location.href='';
+               //          //load_comment();
+               //       }else{
+               //          $('#demo').html('<div style=color:red>**'+result.message+'</div>');
+               //       }
+               //    }
+               // });
+               var xhr = new XMLHttpRequest();
+
+                // Making our connection
+                var url = "../PHP/commentDeleteForm.php?id="+id;
+                xhr.open("POST", url, true);
+                console.log("i'm here");
+                // function execute after request is successful 
+                xhr.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        console.log(this.responseText);
+                        console.log(this);
+                    }
+                }
+                const ID = {id: id};
+                console.log(ID);
+                xhr.send();
+                console.log("i'm here3");
             }
          }
 
+         // function submitForm(){
+         //    var xhr = new XMLHttpRequest();
 
-         $(document).ready(function(){
-            $('#form').on('submit', function(event){
-               event.preventDefault();
-               var form = $(this).serialize();
-               $.ajax({
-                  type: 'POST',
-                  url: "commentForm.php",
-                  data: { 
-                     username : $('#username').val(),
-                     message : $('#message').val(),
-                  },
-                  dataType : 'json',
-                  success : function(result){
-                     if(result.success){
-                        $('#demo').html('<div style=color:green>'+result.message+'</div>');
-                        //window.location.href='';
-                        //load_comment();
-                     }else{
-                        $('#demo').html('<div style=color:red>**'+result.message+'</div>');
-                     }
-                  }
-               });
-               return false;
-            });
+         //        // Making our connection
+         //       var username = document.getElementById("username").value;
+         //       var message= document.getElementById("message").value;
+         //        var url = "../PHP/commentForm.php?username="+username+"&message="+message;
+         //        xhr.open("POST", url, true);
+         //        console.log("i'm here");
+         //        // function execute after request is successful 
+         //        xhr.onreadystatechange = function () {
+         //            if (this.readyState == 4 && this.status == 200) {
+         //                console.log(this.responseText);
+         //                console.log(this);
+         //            }
+         //        }
+         //        //const ID = {id: id};
+         //        //console.log(ID);
+         //        //xhr.setRequestHeader('Content-type', 'application/json; charset=UTF-8');
+         //        xhr.send();
+         //        console.log("i'm here3");
+         //    }
+
+         // $(document).ready(function(){
+         //    $('#form').on('submit', function(event){
+         //       event.preventDefault();
+         //       var form = $(this).serialize();
+         //       $.ajax({
+         //          type: 'POST',
+         //          url: "commentForm.php",
+         //          data: { 
+         //             username : $('#username').val(),
+         //             message : $('#message').val(),
+         //          },
+         //          dataType : 'json',
+         //          success : function(result){
+         //             if(result.success){
+         //                $('#demo').html('<div style=color:green>'+result.message+'</div>');
+         //                //window.location.href='';
+         //                //load_comment();
+         //             }else{
+         //                $('#demo').html('<div style=color:red>**'+result.message+'</div>');
+         //             }
+         //          }
+         //       });
+         //       return false;
+         //    });
             // load_comment();
             // function load_comment(){
             //       $.ajax({
@@ -174,8 +210,7 @@
             //       $('#display_comment').html(result);
             //       }
             //    })
-            // }
-         });
+            //}
       </script>
     </body>
 </html>

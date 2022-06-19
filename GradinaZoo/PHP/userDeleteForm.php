@@ -1,8 +1,8 @@
 <?php
 $conn = mysqli_connect("localhost", "root", "", "atlaszoologic") or die("Connection failed");
 $json = [];
-if(isset($_GET['id']) & !empty($_GET['id'])) {
-    $id = $_GET['id'];
+if(isset($_REQUEST['id']) & !empty($_REQUEST['id'])) {
+    $id = $_REQUEST['id'];
 
     $delete = "DELETE FROM persoane WHERE id = '$id' ";
     $result = mysqli_query($conn, $delete);

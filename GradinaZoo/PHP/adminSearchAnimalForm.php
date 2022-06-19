@@ -129,23 +129,41 @@
     <script>
             function deleteAnimal(id){
             if(confirm('Are you sure you want to delete this user?')){
-               $.ajax({
-                  url: "animalDeleteForm.php",
-                  type: "GET",
-                  data: 'id='+id,
-                  dataType: 'json',
-                  success: function(result) {
-                     if(result.success){
-                        $('#demo').html('<div style=color:green>'+result.message+'</div>');
-                        //window.location.href='';
-                        //load_comment();
-                     }else{
-                        $('#demo').html('<div style=color:red>**'+result.message+'</div>');
-                     }
-                  }
-               });
+            //    $.ajax({
+            //       url: "animalDeleteForm.php",
+            //       type: "GET",
+            //       data: 'id='+id,
+            //       dataType: 'json',
+            //       success: function(result) {
+            //          if(result.success){
+            //             $('#demo').html('<div style=color:green>'+result.message+'</div>');
+            //             //window.location.href='';
+            //             //load_comment();
+            //          }else{
+            //             $('#demo').html('<div style=color:red>**'+result.message+'</div>');
+            //          }
+            //       }
+            //    });
+
+               var xhr = new XMLHttpRequest();
+
+                // Making our connection
+                var url = "../PHP/animalDeleteForm.php?id="+id;
+                xhr.open("POST", url, true);
+                console.log("i'm here");
+                // function execute after request is successful 
+                xhr.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        console.log(this.responseText);
+                        console.log(this);
+                    }
+                }
+                const ID = {id: id};
+                console.log(ID);
+                xhr.send();
+                console.log("i'm here3");
+                }
             }
-         }
         </script>
 
 </body>

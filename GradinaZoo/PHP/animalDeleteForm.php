@@ -1,8 +1,16 @@
 <?php
+function console_log( $data ) {
+    $output  = "<script>console.log( 'PHP debugger: ";
+    $output .= json_encode(print_r($data, true));
+    $output .= "' );</script>";
+    echo $output;
+  }
+
 $conn = mysqli_connect("localhost", "root", "", "atlaszoologic") or die("Connection failed");
 $json = [];
-if(isset($_GET['id']) & !empty($_GET['id'])) {
-    $id = $_GET['id'];
+
+if(isset($_REQUEST['id']) & !empty($_REQUEST['id'])) {
+    $id = $_REQUEST['id'];
 
     $delete = "DELETE FROM animals WHERE id = '$id' ";
     $result = mysqli_query($conn, $delete);
