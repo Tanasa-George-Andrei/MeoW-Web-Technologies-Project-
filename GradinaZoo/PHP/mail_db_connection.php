@@ -47,9 +47,9 @@ class Connection {
 }
 
 define("DB_HOST", "localhost");
-define("DB_NAME", "zoo");
+define("DB_NAME", "atlaszoologic");
 define("DB_CHARSET", "utf8");
 define("DB_USER", "user");
 define("DB_PASSWORD", "password");
 
-$_RSV = new Reservation();
+$_RSV = new Connection();

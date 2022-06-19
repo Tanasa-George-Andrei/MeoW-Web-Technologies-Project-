@@ -89,6 +89,28 @@ INSERT INTO `review` (`id`, `username`, `comment`, `date`) VALUES
 (24, 'admin', 'hello', '2022-06-19 20:15:34');
 
 --
+-- Table structure for table `tickets`
+--
+
+CREATE TABLE `tickets` (
+  `res_date` date NOT NULL,
+  `res_name` varchar(256) NOT NULL,
+  `res_email` varchar(256) NOT NULL,
+  `res_slot` varchar(256) NOT NULL,
+  `res_tel` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Table structure for table `mails`
+--
+
+CREATE TABLE `mails` (
+  `res_name` varchar(256) NOT NULL,
+  `res_email` varchar(256) NOT NULL,
+  `res_message` varchar(5000) NOT NULL,
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
 -- Indexes for dumped tables
 --
 
