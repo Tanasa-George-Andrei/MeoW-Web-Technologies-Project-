@@ -128,63 +128,45 @@ if ($_SESSION['username'] == 'admin') {
     </div>
 
     <script>
-        // function del_Data() {
-        //     var mesage = document.getElementById("msg"); // Get span to display operation information
-        //     Message.InnerHTML = "deleting, please wait…";
-        //     var table = document.getElementById('a'); // Gets the table to display data
-        //     if (table.rows.length == 0) {
-        //         Message.innerhtml = "there is no data in the table to delete!";
-        //         return;
-        //     }
-        //     var id = document.getElementById("hid_id");
-        //     if (id.value.length == 0) {
-        //         Message.innerhtml = "you have not selected data yet!";
-        //         return;
-        //     }
-        //     var ajax = new XMLHttpRequest(); // Define the XMLHttpRequest object
-        //     ajax.open("post", "animalDeleteForm.php ? action = del", true); // Set request mode, request file, asynchronous request
-
-        //     var param = "id = "+escape(id.value); // Gets the ID of the data to be deleted
-
-        //     ajax.onreadystatechange = function() {
-        //         if (ajax.readyState == 4) {
-        //             if (ajax.status == 200) {
-        //                 var xml = ajax.responseXML;
-        //                 var msg = xml.getElementsByTagName("msg")[0].firstChild.nodeValue;
-        //                 if (msg == 0) {
-        //                     Message.innerhtml = "data deleted successfully!";
-        //                     var tr = document.getElementById(id.value); // Gets the currently selected row
-        //                     tr.parentNode.removeChild(tr); // Reference the parent element of the row. Then delete the row
-        //                     id.value = ""; // After deletion, clear the value in the text box,
-        //                 }
-        //                 if (msg == 1) {
-        //                     Message.innerhtml = "server error, deletion failed!";
-        //                 }
-        //             }
-        //         }
-        //     }
-        //     ajax.setRequestHeader("content - type", "application / x - www - form - urlencoded");
-        //     ajax.send(param);
-        // }
         function deleteAnimal(id){
           if(confirm('Are you sure you want to delete this user?')){
-        $.ajax({
-            url: "animalDeleteForm.php",
-            type: "GET",
-            data: 'id='+id,
-            dataType: 'json',
-            success: function(result) {
-                if(result.success){
-                    $('#demo').html('<div style=color:green>'+result.message+'</div>');
-                    //window.location.href='';
-                    //load_comment();
-                }else{
-                    $('#demo').html('<div style=color:red>**'+result.message+'</div>');
+                // $.ajax({
+                //     url: "animalDeleteForm.php",
+                //     type: "GET",
+                //     data: 'id='+id,
+                //     dataType: 'json',
+                //     success: function(result) {
+                //         if(result.success){
+                //             $('#demo').html('<div style=color:green>'+result.message+'</div>');
+                //             //window.location.href='';
+                //             //load_comment();
+                //         }else{
+                //             $('#demo').html('<div style=color:red>**'+result.message+'</div>');
+                //         }
+                //     }
+                // });
+
+                var xhr = new XMLHttpRequest();
+
+                // Making our connection
+                var url = "../PHP/animalDeleteForm.php?id="+id;
+                xhr.open("POST", url, true);
+                console.log("i'm here");
+                // function execute after request is successful 
+                xhr.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        console.log(this.responseText);
+                        console.log(this);
+                    }
                 }
-            }
-        });
+                const ID = {id: id};
+                console.log(ID);
+                xhr.send();
+                console.log("i'm here3");
             }
         }
+
+
     </script>
 
 
