@@ -99,31 +99,31 @@
             <div id="animalgrid">
                 <div class="griditem">
                     <figure>
-                        <a href="wiki.html"><img src="../Img/temp_slide1.jpg" alt="Temporary Slide" /></a>
+                        <a href="../HTML/wiki.html"><img src="../Img/temp_slide1.jpg" alt="Temporary Slide" /></a>
                         <figcaption>Temporary</figcaption>
                     </figure>
                 </div>
                 <div class="griditem">
                     <figure>
-                        <a href="wiki.html"><img src="../Img/temp_slide2.jpg" alt="Temporary Grid" /></a>
+                        <a href="../HTML/wiki.html"><img src="../Img/temp_slide2.jpg" alt="Temporary Grid" /></a>
                         <figcaption>Temporary</figcaption>
                     </figure>
                 </div>
                 <div class="griditem">
                     <figure>
-                        <a href="wiki.html"><img src="../Img/temp_slide0.jpg" alt="Temporary Grid" /></a>
+                        <a href="../HTML/wiki.html"><img src="../Img/temp_slide0.jpg" alt="Temporary Grid" /></a>
                         <figcaption>Temporary</figcaption>
                     </figure>
                 </div>
                 <div class="griditem">
                     <figure>
-                        <a href="wiki.html"><img src="../Img/temp_slide2.jpg" alt="Temporary Grid" /></a>
+                        <a href="../HTML/wiki.html"><img src="../Img/temp_slide2.jpg" alt="Temporary Grid" /></a>
                         <figcaption>Temporary</figcaption>
                     </figure>
                 </div>
                 <div class="griditem">
                     <figure>
-                        <a href="wiki.html"><img src="../Img/temp_slide1.jpg" alt="Temporary Grid" /></a>
+                        <a href="../HTML/wiki.html"><img src="../Img/temp_slide1.jpg" alt="Temporary Grid" /></a>
                         <figcaption>Temporary</figcaption>
                     </figure>
                 </div>
