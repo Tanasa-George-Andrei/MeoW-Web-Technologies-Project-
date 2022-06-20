@@ -84,10 +84,7 @@
     width: 100%;
     text-align: center;
     align-content: center;
-    max-width: 70vw;
-    max-height: 140vh;
-    margin-top: -10vh;
-    display: none;
+    display: block;
 }
 
 .slides {
