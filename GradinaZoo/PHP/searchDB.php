@@ -9,7 +9,7 @@ $hint="";
 if (strlen($q)>0 && $all==0) {
   $hint="";
   $searchTerms=explode(" ", strtolower($q));
-  $finalsql="SELECT an.id AS ID, an.xml_file AS XMLF, an.name AS ANAME, an.main_image_file AS IMAGEF, an.sci_name AS SNAME, COUNT(an.id) AS C FROM animals an LEFT JOIN attributes att ON an.id=att.animal_id WHERE ";
+  $finalsql="SELECT an.id AS ID, an.xml_file AS XMLF, an.name AS ANAME, an.main_image_file AS IMAGEF, an.sci_name AS SNAME, COUNT(an.id) AS C FROM wanimals an LEFT JOIN attributes att ON an.id=att.animal_id WHERE ";
   for($i=0; $i<count($searchTerms); $i++)
   {
      $finalsql=$finalsql."an.name LIKE '%".$searchTerms[$i]."%' OR an.sci_name LIKE '%".$searchTerms[$i]."%' OR att.value LIKE '%".$searchTerms[$i]."%'";
@@ -35,7 +35,7 @@ if (strlen($q)>0 && $all==0) {
 
 if($all==1){
   $hint="";
-  $finalsql="SELECT an.id AS ID, an.xml_file AS XMLF, an.name AS ANAME, an.main_image_file AS IMAGEF, an.sci_name AS SNAME FROM animals an ORDER BY an.name DESC;";
+  $finalsql="SELECT an.id AS ID, an.xml_file AS XMLF, an.name AS ANAME, an.main_image_file AS IMAGEF, an.sci_name AS SNAME FROM wanimals an ORDER BY an.name DESC;";
   $result=$conn->query($finalsql);
   if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
@@ -52,7 +52,7 @@ if($all==1){
 
 /*if($all==2){
   $hint="";
-  $finalsql="SELECT an.id AS ID, an.xml_file AS XMLF, an.name AS ANAME, an.main_image_file AS IMAGEF, an.sci_name AS SNAME FROM animals an ORDER BY an.name DESC LIMIT 6;";
+  $finalsql="SELECT an.id AS ID, an.xml_file AS XMLF, an.name AS ANAME, an.main_image_file AS IMAGEF, an.sci_name AS SNAME FROM wanimals an ORDER BY an.name DESC LIMIT 6;";
   $result=$conn->query($finalsql);
   if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {

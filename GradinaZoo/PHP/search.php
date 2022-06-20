@@ -34,7 +34,7 @@
                     <input type="text" size="30" placeholder="grey omnivore" onkeyup="showResults(this.value)">
                 </form>
             </div>
-            <!--TODO: Add some select animals-->
+
             <div id="slide-show">
                 <div class="slides">
                     <a href="wiki.php/q?file=grey parrot.xml"><img src="/Img/440px-Psittacus_erithacus_-perching_on_tray-8d.jpg"></a>
