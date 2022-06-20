@@ -8,7 +8,7 @@ if (isset($_POST["name"])) {
     $_POST["name"], $_POST["email"], $_POST["message"])) {
     //  echo "<div class='ok'>Reservation saved.</div>";
     $alert = '<div class="alert-success">
-    <span>Ticket buyed! Thank you for your receipt!</span>
+    <span>Message Sent! Thank you for contacting us!</span>
    </div>';
   } else { 
     $alert = '<div class="alert-error">

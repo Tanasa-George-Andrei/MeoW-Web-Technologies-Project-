@@ -49,7 +49,7 @@ class Connection {
 define("DB_HOST", "localhost");
 define("DB_NAME", "atlaszoologic");
 define("DB_CHARSET", "utf8");
-define("DB_USER", "user");
-define("DB_PASSWORD", "password");
+define("DB_USER", "root");
+define("DB_PASSWORD", "");
 
 $_RSV = new Connection();

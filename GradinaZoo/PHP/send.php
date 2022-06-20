@@ -33,7 +33,7 @@ if(isset($_POST['submit'])){
 
     $phpmailer->send();
     $alert = '<div class="alert-success">
-                 <span>Message Sent! Thank you for contacting us.</span>
+                 <span>Message Sent! Thank you for contacting us!</span>
                 </div>';
   } catch (Exception $e){
     $alert = '<div class="alert-error">

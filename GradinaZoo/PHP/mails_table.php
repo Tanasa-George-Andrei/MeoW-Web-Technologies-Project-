@@ -16,7 +16,7 @@
 </tr>
 
 <?php
-$conn = mysqli_connect("localhost", "user", "password", "zoo");
+$conn = mysqli_connect("localhost", "root", "", "atlaszoologic");
 // Check connection
 if ($conn->connect_error) {
 die("Connection failed: " . $conn->connect_error);
@@ -26,8 +26,8 @@ $result = $conn->query($sql);
 if ($result->num_rows > 0) {
 // output data of each row
 while($row = $result->fetch_assoc()) {
-echo "<tr><td>" . $row["res_name"]. "</td><td>" . $row["res_email"] . "</td><td>"
-. $row["res_message"]. "</td></tr>";
+echo "<tr><td>" . $row["name"]. "</td><td>" . $row["email"] . "</td><td>"
+. $row["message"]. "</td></tr>";
 }
 echo "</table>";
 } else { echo "0 results"; }
