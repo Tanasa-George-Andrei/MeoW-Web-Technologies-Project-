@@ -3,7 +3,7 @@
 $dbServername = "localhost:3306";
 $dbUsername = "root";
 $dbPassword = "";
-$dbName = "zoodb";
+$dbName = "atlaszoologic";
 
 $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName) or die("Connection failed");
 

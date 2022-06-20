@@ -107,7 +107,7 @@ CREATE TABLE `tickets` (
 CREATE TABLE `mails` (
   `name` varchar(256) NOT NULL,
   `email` varchar(256) NOT NULL,
-  `message` varchar(5000) NOT NULL,
+  `message` varchar(5000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -153,6 +153,43 @@ ALTER TABLE `persoane`
 --
 ALTER TABLE `review`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+
+CREATE TABLE `wanimals` (
+  `id` int(11) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `sci_name` varchar(100) NOT NULL,
+  `xml_file` varchar(100) NOT NULL,
+  `main_image_file` varchar(100) NOT NULL,
+  `created_at` date NOT NULL DEFAULT current_timestamp(),
+  `updated_at` date NOT NULL DEFAULT current_timestamp(),
+  UNIQUE(sci_name)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `attributes` (
+  `id` int(11) NOT NULL,
+  `type` varchar(100) NOT NULL,
+  `value` varchar(100) NOT NULL,
+  `animal_id` int(11) NOT NULL,
+  `created_at` date NOT NULL DEFAULT current_timestamp(),
+  `updated_at` date NOT NULL DEFAULT current_timestamp(),
+  UNIQUE(animal_id,type,value)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE `wanimals`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `attributes`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `wanimals`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  
+ALTER TABLE `attributes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+  
+ALTER TABLE `attributes`
+  ADD FOREIGN KEY (`animal_id`) REFERENCES `wanimals`(`id`);
+
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

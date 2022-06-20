@@ -44,7 +44,7 @@ if (file_exists($target_file)) {
       rename($target_file, $target_dir.strtolower($xml->entry->name).".xml");
       $target_file = $target_dir.strtolower($xml->entry->name);
       echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
-      $sql="INSERT INTO animals(name, sci_name, xml_file, main_image_file) VALUES ('" . strtolower($xml->entry->name) . "', '" . strtolower($xml->entry->scientific_name) . "', '" . strtolower($xml->entry->name) . ".xml', '"  . strtolower($xml->entry->main_image) . "')";
+      $sql="INSERT INTO wanimals(name, sci_name, xml_file, main_image_file) VALUES ('" . strtolower($xml->entry->name) . "', '" . strtolower($xml->entry->scientific_name) . "', '" . strtolower($xml->entry->name) . ".xml', '"  . strtolower($xml->entry->main_image) . "')";
       if ($conn->query($sql) === TRUE) {
         $last_animal_id = $conn->insert_id;
       } else {
