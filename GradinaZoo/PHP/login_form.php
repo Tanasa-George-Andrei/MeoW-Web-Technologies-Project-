@@ -1,5 +1,8 @@
 <?php 
 	session_start(); 
+	$_SESSION['username']="";
+	$_SESSION['name'] ="";
+    $_SESSION['id'] ="";
 	include "db_connect.php";
 
 	if (isset($_POST['username']) && isset($_POST['password'])) {

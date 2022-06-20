@@ -49,6 +49,10 @@
                 </ul>
             </div>
         </div>
+        <br>
+        <br>
+        <br>
+        <br>
 
         <div class="gradina">
             <h1>Welcome to Zoo Garden</h1>
