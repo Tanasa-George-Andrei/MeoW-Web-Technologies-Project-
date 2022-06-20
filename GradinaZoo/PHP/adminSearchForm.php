@@ -47,7 +47,7 @@ if ($_SESSION['username'] == 'admin') {
             <ul>
                 <li><a href="../PHP/Welcome.php">Home</a></li>
                 <li><a href="../PHP/Review.php" target="_top">Review</a></li>
-                <li><a href="../HTML/search.php" target="_top">Search</a></li>
+                <li><a href="/PHP/search.php" target="_top">Search</a></li>
                 <li><a href="../HTML/about.html" target="_top">About</a></li>
                 <li><a href="../HTML/contact.html" target="_top">Contact Us</a></li>
                 <li><a href="../HTML/raport.html" target="_top">Raport</a></li>
