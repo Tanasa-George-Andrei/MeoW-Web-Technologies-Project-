@@ -27,6 +27,18 @@
     margin: 0 20px;
 }
 
+.navbar ul li img{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-bottom: -12px;
+  }
+  
+  .navbar ul li h1{
+    color:wheat;
+    font-size: 20px;
+  }
+
 .navbar ul li a{
     text-decoration: none;
     color:white;

@@ -10,7 +10,7 @@ $fileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
 if($fileType != "xml" && $fileType != "jpg" && $fileType != "png" && $fileType != "jpeg"
 && $fileType != "gif") {
-  $message= "Sorry, only XML files or are allowed.";
+  echo "Sorry, only XML files or are allowed.";
   $uploadOk = 0;
 } else if ($fileType == "xml")
 {
@@ -23,53 +23,52 @@ $target_file = $target_dir . $target_name;
 if(isset($_POST["submit"])) {
   $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
   if($check !== false) {
-    $message= "File is an image - " . $check["mime"] . ".";
+    echo "File is an image - " . $check["mime"] . ".";
     $uploadOk = 1;
   } else {
-    $message= "File is not an image.";
+    echo "File is not an image.";
     $uploadOk = 0;
   }
 }
 }
 
 if (file_exists($target_file)) {
-    $message= "Sorry, please rename file.";
+    echo "Sorry, please rename file.";
     $uploadOk = 0;
   }
   
   if ($uploadOk == 0) {
-    $message= "Sorry, your file was not uploaded.";
+    echo "Sorry, your file was not uploaded.";
   } else if ($fileType == "xml") {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
       $xml=simplexml_load_file($target_file) or die("Error: Cannot create object");
       rename($target_file, $target_dir.strtolower($xml->entry->name).".xml");
       $target_file = $target_dir.strtolower($xml->entry->name);
-      $message= "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+      echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
       $sql="INSERT INTO wanimals(name, sci_name, xml_file, main_image_file) VALUES ('" . strtolower($xml->entry->name) . "', '" . strtolower($xml->entry->scientific_name) . "', '" . strtolower($xml->entry->name) . ".xml', '"  . strtolower($xml->entry->main_image) . "')";
       if ($conn->query($sql) === TRUE) {
         $last_animal_id = $conn->insert_id;
       } else {
-        $message= "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $sql . "<br>" . $conn->error;
       }
       foreach($xml->entry->attributes->attribute as $attribute)
       {
         $sql="INSERT INTO attributes(type, value, animal_id) VALUES ('" . strtolower($attribute->type) . "', '" . strtolower($attribute->value) . "', " . $last_animal_id . ")";
         if ($conn->query($sql) === FALSE) 
         {
-            $message= "Error: " . $sql . "<br>" . $conn->error;
+            echo "Error: " . $sql . "<br>" . $conn->error;
         }
       }
     } else {
-      $message= "Sorry, there was an error uploading your file.";
+      echo "Sorry, there was an error uploading your file.";
     }
   } else if ($fileType == "jpg" || $fileType == "png" || $fileType == "jpeg"
   || $fileType == "gif")
   {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-      $message= "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+      echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
     } else {
-      $message= "Sorry, there was an error uploading your file.";
+      echo "Sorry, there was an error uploading your file.";
     }
   }
-  header("Location: uploadPage.php/q?message=".$message);
-	exit();
+  //header("Location: uploadPage.php/q?message=".$message);

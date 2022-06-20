@@ -19,39 +19,41 @@ if ($_SESSION['username'] == 'admin') {
 
 <body>
     <div class="banner">
-        <div class="navbar">
-            <ul>
-                <?php
-                session_start();
-                if (isset($_SESSION['id']) && isset($_SESSION['username'])) {
-                ?>
+    <div class="navbar">
+        <ul>
+                    <?php
+                        // session_start();
+                        if(isset($_SESSION['id']) && isset($_SESSION['username'])){
+                    ?>
                     <li> <img src="../Img/profile.jpg" alt=""> </li>
-                    <li>
-                        <h1>Hello, <?php echo $_SESSION['username']; ?></h1>
-                    </li>
+                    <li> <h1>Hello, <?php echo $_SESSION['username']; ?></h1> </li>
                     <li><a href="logout.php" target="_top">Logout</a></li>
-                <?php
-                } else {
-                ?>
+                    <?php
+                        }else{
+                    ?>
                     <li><a href="Login.php" target="_top">Log In</a></li>
-                <?php
-                }
-                ?>
-                <?php if ($_SESSION['username'] == 'admin') { ?>
+                    <?php
+                        }
+                    ?>
+                    <?php if($_SESSION['username'] == 'admin'){?>
                     <li><a href="adminPage.php" target="_top">AdminSection</a></li>
-                <?php
-                }
-                ?>
-            </ul>
-            <ul>
-                <li><a href="../PHP/Welcome.php">Home</a></li>
-                <li><a href="../PHP/Review.php" target="_top">Review</a></li>
-                <li><a href="/PHP/search.php" target="_top">Search</a></li>
-                <li><a href="../HTML/about.html" target="_top">About</a></li>
-                <li><a href="../HTML/contact.html" target="_top">Contact Us</a></li>
-                <li><a href="../HTML/raport.html" target="_top">Raport</a></li>
-            </ul>
-        </div>
+                    <?php
+                  }
+               ?>
+                </ul>
+        <ul>
+        <strong><li><a href="Welcome.php">Home</a></li></strong>
+        <strong><li><a href="Review.php">Review</a></li></strong>
+        <strong><li><a href="/PHP/search.php">Search</a></li></strong>
+        <strong><li><a href="about.php">About</a></li></strong>
+        <strong><li><a href="animals.php">Animals</a></li></strong>
+        <strong><li><a href="tickets.php">Tickets</a></li></strong>
+        <strong><li><a href="contact.php">Contact Us</a></li></strong>
+        <strong><li><a href="Login.php">LogIn</a></li></strong>
+        <strong><li><a href="logout.php">Logout</a></li></strong>
+        <strong><li><a href="../HTML/raport.html">Raport</a></li></strong>
+        </ul>
+    </div>
 
         <!-- Table of Animals -->
         <div class="table">
@@ -124,6 +126,10 @@ if ($_SESSION['username'] == 'admin') {
             <form action="../PHP/adminAnimalPage.php">
                 <input type="submit" value="Animal page" />
             </form>
+            <form action="/PHP/uploadPage.php">
+                <input type="submit" value="Upload files for wiki"/>
+            </form>
+            <!-- <a href="/PHP/uploadPage.php/q?message="">Upload into Wiki XML File</a>; -->
         </div>
     </div>
 

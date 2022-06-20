@@ -1,3 +1,8 @@
+<?php
+session_start();
+if($_SESSION['username'] == 'admin'){}
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -13,30 +18,48 @@
 
 <body>
     <div class="banner">
-        <div class="navbar">
-            <ul>
-                <li><a href="/PHP/Welcome.php">Home</a></li>
-                <li><a href="/PHP/Review.html">Review</a></li>
-                <li><a href="/PHP/search.php">Search</a></li>
-                <li><a href="/PHP/about.php">About</a></li>
-                <li><a href="/PHP/animals.php">Animals</a></li>
-                <li><a href="/PHP/contact.php">Contact Us</a></li>
-                <li><a href="/PHP/login.php">LogIn</a></li>
-                <li><a href="/PHP/logout.php">Logout</a></li>
-                <li><a href="raport.html">Raport</a></li>
-            </ul>
-        </div>
+    <div class="navbar">
+        <ul>
+                    <?php
+                        // session_start();
+                        if(isset($_SESSION['id']) && isset($_SESSION['username'])){
+                    ?>
+                    <li> <img src="../Img/profile.jpg" alt=""> </li>
+                    <li> <h1>Hello, <?php echo $_SESSION['username']; ?></h1> </li>
+                    <li><a href="logout.php" target="_top">Logout</a></li>
+                    <?php
+                        }else{
+                    ?>
+                    <li><a href="Login.php" target="_top">Log In</a></li>
+                    <?php
+                        }
+                    ?>
+                    <?php if($_SESSION['username'] == 'admin'){?>
+                    <li><a href="adminPage.php" target="_top">AdminSection</a></li>
+                    <?php
+                  }
+               ?>
+                </ul>
+        <ul>
+        <strong><li><a href="/PHP/Welcome.php">Home</a></li></strong>
+        <strong><li><a href="/PHP/Review.php">Review</a></li></strong>
+        <strong><li><a href="/PHP/search.php">Search</a></li></strong>
+        <strong><li><a href="/PHP/about.php">About</a></li></strong>
+        <strong><li><a href="/PHP/animals.php">Animals</a></li></strong>
+        <strong><li><a href="/PHP/tickets.php">Tickets</a></li></strong>
+        <strong><li><a href="/PHP/contact.php">Contact Us</a></li></strong>
+        <strong><li><a href="/PHP/Login.php">LogIn</a></li></strong>
+        <strong><li><a href="/PHP/logout.php">Logout</a></li></strong>
+        <strong><li><a href="../HTML/raport.html">Raport</a></li></strong>
+        </ul>
+    </div>
     </div>
     <div>
     <form action="upload.php" method="post" enctype="multipart/form-data">
-        Select XML to upload:
+        Select XML OR IMAGE to upload:
         <input type="file" name="fileToUpload" id="fileToUpload">
         <input type="submit" value="Upload XML OR IMAGE" name="submit">
     </form>
-    <?php
-    $message=$_GET["message"];
-    echo $message;
-    ?>
     </div>
 
 </body>

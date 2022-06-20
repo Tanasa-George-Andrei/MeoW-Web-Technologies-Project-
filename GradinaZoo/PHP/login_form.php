@@ -33,7 +33,7 @@
             		$_SESSION['username'] = $row['username'];
             		$_SESSION['name'] = $row['name'];
             		$_SESSION['id'] = $row['id'];
-            		header("Location: Welcome.php");
+            		header("Location: ../HTML/bunvenit.html");
 		        	exit();
             	}else{
 					header("Location: login.php?error=Incorect User name or password 1" .  mysqli_connect_error());
