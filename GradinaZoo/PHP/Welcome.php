@@ -29,7 +29,9 @@
                     <?php
                         }
                     ?>
-                    <?php if($_SESSION['username'] == 'admin'){?>
+                    <?php 
+                    $username=$_SESSION["username"];
+                    if($_SESSION['username'] == 'admin'){?>
                         <li><a href="adminPage.php" target="_top">AdminSection</a></li>
                     <?php
                         }

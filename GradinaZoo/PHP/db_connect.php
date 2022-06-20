@@ -1,9 +1,12 @@
 <?php
-    // connect to database
 
-    $conn=mysqli_connect("localhost", "root", "", "atlaszoologic") or die("Connection failed");
+$dbServername = "localhost:3306";
+$dbUsername = "root";
+$dbPassword = "";
+$dbName = "atlaszoologic";
 
-    if(!$conn){
-        echo "Connection failed!";
-    }
-?>
+$conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName) or die("Connection failed");
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+  } 

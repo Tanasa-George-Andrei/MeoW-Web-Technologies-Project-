@@ -14,6 +14,7 @@
             <ul>
             <?php
                   session_start();
+                  $_SESSION['username'] = "";
                   if(isset($_SESSION['id']) && isset($_SESSION['username'])){
                ?>
                <li> <img src="../Img/profile.jpg" alt=""> </li>
@@ -58,7 +59,7 @@
             <div class="comments-info">
 
                <?php 
-               $conn = mysqli_connect("localhost", "root", "", "atlaszoologic") or die("Connection failed");
+               include_once 'db_connect.php';
                $query = "SELECT id, username, comment, date FROM review";
                $result = $conn->query($query);
                
