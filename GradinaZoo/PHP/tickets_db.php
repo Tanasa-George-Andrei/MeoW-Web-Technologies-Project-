@@ -5,7 +5,7 @@ $alert = '';
 if (isset($_POST["date"])) {
   require "tickets_db_connection.php";
   if ($_RSV->save(
-    $_POST["date"], $_POST["slot"], $_POST["name"],
+    $_POST["date"], $_POST["ticket"], $_POST["name"],
     $_POST["email"], $_POST["phone"])) {
     //  echo "<div class='ok'>Reservation saved.</div>";
     $alert = '<div class="alert-success">

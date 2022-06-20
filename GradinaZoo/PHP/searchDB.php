@@ -24,7 +24,7 @@ if (strlen($q)>0 && $all==0) {
     while($row = $result->fetch_assoc()) {
       $hint = $hint . "<div class='griditem'>
       <figure>
-          <a href='wiki.php/q?".$row["XMLF"]."'><img src='../Img/".$row["IMAGEF"]."' alt='".$row["ANAME"]."' /></a>
+          <a href='wiki.php/q?file=".$row["XMLF"]."'><img src='../Img/".$row["IMAGEF"]."' alt='".$row["ANAME"]."' /></a>
           <figcaption>".ucfirst($row["ANAME"])."</figcaption>
       </figure>
       </div>

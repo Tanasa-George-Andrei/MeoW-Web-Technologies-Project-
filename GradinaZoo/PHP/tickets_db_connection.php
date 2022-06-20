@@ -25,7 +25,7 @@ class Connection {
   }
 
   // (C) SAVE RESERVATION
-  function save ($date, $slot, $name, $email, $phone) {
+  function save ($date, $ticket, $name, $email, $phone) {
     try {
       $this->stmt = $this->pdo->prepare(
         "INSERT INTO `tickets` (`date`, `ticket`, `name`, `email`, `phone`) VALUES (?,?,?,?,?)"
