@@ -33,6 +33,10 @@
         <input type="file" name="fileToUpload" id="fileToUpload">
         <input type="submit" value="Upload XML OR IMAGE" name="submit">
     </form>
+    <?php
+    $message=$_GET["message"];
+    echo $message;
+    ?>
     </div>
 
 </body>
