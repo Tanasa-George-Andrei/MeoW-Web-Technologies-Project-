@@ -145,8 +145,11 @@
 }
 
 .delete button:nth-child(1){
+    font-size: 30px;
     background-color: #f00000;
     margin-left: 20px;
+    width: 10px;
+    height: 10px;
 }
 
 .commets-container{
