@@ -14,7 +14,7 @@
     <div class="banner">
         <div class="navbar">
             <ul>
-            <li><a href="/PHP/Welcome.php">Home</a></li>
+                <li><a href="/PHP/Welcome.php">Home</a></li>
                 <li><a href="/PHP/Review.html">Review</a></li>
                 <li><a href="/PHP/search.php">Search</a></li>
                 <li><a href="/PHP/about.php">About</a></li>
@@ -37,27 +37,39 @@
 
             <div id="slide-show">
                 <div class="slides">
-                    <a href="wiki.php/q?file=grey parrot.xml"><img src="../Img/440px-Psittacus_erithacus_-perching_on_tray-8d.jpg"></a>
+                    <a href="wiki.php/q?file=grey parrot.xml">
+                        <img src="../Img/440px-Psittacus_erithacus_-perching_on_tray-8d.jpg">
+                    </a>
                 </div>
 
                 <div class="slides">
-                    <a href="wiki.php/q?file=wolf.xml"><img src="../Img/Front_view_of_a_resting_Canis_lupus_ssp.jpg"></a>
+                    <a href="wiki.php/q?file=wolf.xml">
+                        <img src="../Img/Front_view_of_a_resting_Canis_lupus_ssp.jpg">
+                    </a>
                 </div>
 
                 <div class="slides">
-                    <a href="wiki.php/q?file=gorilla.xml"><img src="../Img/Gorille_des_plaines_de_louest_à_lEspace_Zoologique.jpg"></a>
+                    <a href="wiki.php/q?file=gorilla.xml">
+                        <img src="../Img/Gorille_des_plaines_de_louest_à_lEspace_Zoologique.jpg">
+                    </a>
                 </div>
 
                 <div class="slides">
-                    <a href="wiki.php/q?file=giant panda.xml"><img src="../Img/Grosser_Panda.jpg"></a>
+                    <a href="wiki.php/q?file=giant panda.xml">
+                        <img src="../Img/Grosser_Panda.jpg">
+                    </a>
                 </div>
 
                 <div class="slides">
-                    <a href="wiki.php/q?file=bobcat.xml"><img src="../Img/Bobcat_at_Columbus_Zoo_Boo.jpg"></a>
+                    <a href="wiki.php/q?file=bobcat.xml">
+                        <img src="../Img/Bobcat_at_Columbus_Zoo_Boo.jpg">
+                    </a>
                 </div>
 
                 <div class="slides">
-                    <a href="wiki.php/q?file=komodo dragon.xml"><img src="../Img/Komodo_dragon_with_tongue.jpg"></a>
+                    <a href="wiki.php/q?file=komodo dragon.xml">
+                        <img src="../Img/Komodo_dragon_with_tongue.jpg">
+                    </a>
                 </div>
 
                 <a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -69,37 +81,38 @@
 
                 <div class="row">
                     <div class="column">
-                        <img class="demo cursor" src="../Img/440px-Psittacus_erithacus_-perching_on_tray-8d.jpg" width="100%" onclick="currentSlide(1)"
-                            alt="Grey Parrot">
+                        <img class="demo cursor" src="../Img/440px-Psittacus_erithacus_-perching_on_tray-8d.jpg"
+                            width="100%" onclick="currentSlide(1)" alt="Grey Parrot">
                     </div>
                     <div class="column">
-                        <img class="demo cursor" src="../Img/Front_view_of_a_resting_Canis_lupus_ssp.jpg" width="100%" onclick="currentSlide(2)"
-                            alt="Wolf">
+                        <img class="demo cursor" src="../Img/Front_view_of_a_resting_Canis_lupus_ssp.jpg" width="100%"
+                            onclick="currentSlide(2)" alt="Wolf">
                     </div>
                     <div class="column">
-                        <img class="demo cursor" src="../Img/Gorille_des_plaines_de_louest_à_lEspace_Zoologique.jpg" width="100%" onclick="currentSlide(3)"
-                            alt="Gorilla">
+                        <img class="demo cursor" src="../Img/Gorille_des_plaines_de_louest_à_lEspace_Zoologique.jpg"
+                            width="100%" onclick="currentSlide(3)" alt="Gorilla">
                     </div>
                     <div class="column">
                         <img class="demo cursor" src="../Img/Grosser_Panda.jpg" width="100%" onclick="currentSlide(4)"
                             alt="Giant Panda">
                     </div>
                     <div class="column">
-                        <img class="demo cursor" src="../Img/Bobcat_at_Columbus_Zoo_Boo.jpg" width="100%" onclick="currentSlide(5)"
-                            alt="Bobcat">
+                        <img class="demo cursor" src="../Img/Bobcat_at_Columbus_Zoo_Boo.jpg" width="100%"
+                            onclick="currentSlide(5)" alt="Bobcat">
                     </div>
                     <div class="column">
-                        <img class="demo cursor" src="../Img/Komodo_dragon_with_tongue.jpg" width="100%" onclick="currentSlide(6)"
-                            alt="Komodo dragon">
+                        <img class="demo cursor" src="../Img/Komodo_dragon_with_tongue.jpg" width="100%"
+                            onclick="currentSlide(6)" alt="Komodo dragon">
                     </div>
                 </div>
             </div>
             <script src="/JavaScript/slideshow.js"></script>
             <div id="animalgrid">
-                
+
             </div>
-            <script src="/JavaScript/searchHandler.js"></script> 
+            <script src="/JavaScript/searchHandler.js"></script>
         </div>
     </div>
 </body>
+
 </html>
