@@ -27,6 +27,7 @@
         <strong><li><a href="Login.php">LogIn</a></li></strong>
         <strong><li><a href="logout.php">Logout</a></li></strong>
         <strong><li><a href="../HTML/raport.html">Raport</a></li></strong>
+        <strong><li><a href="mails_table.php">Status</a></li></strong>
         </ul>
     </div>
     <br>
