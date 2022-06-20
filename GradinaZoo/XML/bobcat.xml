@@ -1,0 +1,33 @@
+<animal>
+    <entry>
+        <name>bobcat</name>
+        <scientific_name>Lynx rufus</scientific_name>
+        <main_image>Bobcat_at_Columbus_Zoo_Boo.jpg</main_image>
+        <attributes>
+            <attribute>
+                <type>diet</type>
+                <value>carnivore</value>
+            </attribute>
+            <attribute>
+                <type>covered in</type>
+                <value>fur</value>
+            </attribute>
+            <attribute>
+                <type>coloration</type>
+                <value>grey, silver, black, yellow</value>
+            </attribute>
+            <attribute>
+                <type>type</type>
+                <value>mammal</value>
+            </attribute>
+        </attributes>
+    </entry>
+    <gallery>
+        <image>
+            <name></name>
+            <path></path>
+        </image>
+    </gallery>
+    <short_description></short_description>
+    <info></info>
+</animal>

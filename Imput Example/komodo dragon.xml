@@ -1,0 +1,42 @@
+<animal>
+    <entry>
+        <name>komodo dragon</name>
+        <scientific_name>varanus komodoensis</scientific_name>
+        <main_image>Komodo_dragon_with_tongue.jpg</main_image>
+        <attributes>
+            <attribute>
+                <type>diet</type>
+                <value>carnivore</value>
+            </attribute>
+            <attribute>
+                <type>covered in</type>
+                <value>scales</value>
+            </attribute>
+            <attribute>
+                <type>coloration</type>
+                <value>grey, green, yellow, orange</value>
+            </attribute>
+            <attribute>
+                <type>type</type>
+                <value>reptile</value>
+            </attribute>
+        </attributes>
+    </entry>
+    <gallery>
+        <image>
+            <name>Komodo dragon with tongue</name>
+            <path>Komodo_dragon_with_tongue.jpg</path>
+        </image>
+    </gallery>
+    <short_description>n the wild, adult Komodo dragons usually weigh around 70 kg (150 lb), although captive specimens often weigh more. According to Guinness World Records, an average adult male will weigh 79 to 91 kg (174 to 201 lb) and measure 2.59 m (8.5 ft), while an average female will weigh 68 to 73 kg (150 to 161 lb) and measure 2.29 m (7.5 ft). The largest verified specimen in captive was 3.13 m (10.3 ft) long and weighed 166 kg (366 lb), including its undigested food. The largest wild specimen had a length 3.04 m (10.0 ft), a snout-vent length (SVL) 1.54 m (5 ft 1 in) and a mass of 81.5 kg (180 lb) excluding stomach contents. The heaviest reached a mass in 87.4 kg (193 lb). The study noted that weights greater than 100 kg (220 lb) were possible but only after the animal had consumed a large meal.
+Closeup of the skin
+
+The Komodo dragon has a tail as long as its body, as well as about 60 frequently replaced, serrated teeth that can measure up to 2.5 cm (1 in) in length. Its saliva is frequently blood-tinged because its teeth are almost completely covered by gingival tissue that is naturally lacerated during feeding. It also has a long, yellow, deeply forked tongue. Komodo dragon skin is reinforced by armoured scales, which contain tiny bones called osteoderms that function as a sort of natural chain-mail. The only areas lacking osteoderms on the head of the adult Komodo dragon are around the eyes, nostrils, mouth margins, and pineal eye, a light-sensing organ on the top of the head. Where lizards typically have one or two varying patterns or shapes of osteoderms, komodos have four: rosette, platy, dendritic, and vermiform. This rugged hide makes Komodo dragon skin a poor source of leather. Additionally, these osteoderms become more extensive and variable in shape as the Komodo dragon ages, ossifying more extensively as the lizard grows. These osteoderms are absent in hatchlings and juveniles, indicating that the natural armor develops as a product of age and competition between adults for protection in intraspecific combat over food and mates. </short_description>
+    <info>The Komodo dragon (Varanus komodoensis), also known as the Komodo monitor, is a member of the monitor lizard family Varanidae that is endemic to the Indonesian islands of Komodo, Rinca, Flores, and Gili Motang. It is the largest extant species of lizard, growing to a maximum length of 3 metres (10 ft), and weighing up to approximately 70 kilograms (150 lb).
+
+As a result of their size, Komodo dragons are apex predators, and dominate the ecosystems in which they live. Komodo dragons hunt and ambush prey including invertebrates, birds, and mammals. It has been claimed that they have a venomous bite; there are two glands in the lower jaw that secrete several toxic proteins. The biological significance of these proteins is disputed, but the glands have been shown to secrete an anticoagulant. Komodo dragons' group behavior in hunting is exceptional in the reptile world. The diet of Komodo dragons mainly consists of Javan rusa (Rusa timorensis), though they also eat considerable amounts of carrion. Komodo dragons also occasionally attack humans.
+
+Mating begins between May and August, and the eggs are laid in September; as many as 20 eggs are deposited at a time in an abandoned megapode nest or in a self-dug nesting hole. The eggs are incubated for seven to eight months, hatching in April, when insects are most plentiful. Young Komodo dragons are vulnerable and dwell in trees to avoid predators, such as cannibalistic adults. They take 8 to 9 years to mature and are estimated to live up to 30 years.
+
+Komodo dragons were first recorded by Western scientists in 1910. Their large size and fearsome reputation make them popular zoo exhibits. In the wild, their range has contracted due to human activities, and is likely to contract further from the effects of climate change; due to this, they are listed as Endangered by the IUCN Red List. They are protected under Indonesian law, and Komodo National Park was founded in 1980 to aid protection efforts. </info>
+</animal>

@@ -33,7 +33,7 @@ if (isset($_POST["date"])) {
         <ul>
             <strong><li><a href="Welcome.php">Home</a></li></strong>
             <strong><li><a href="Review.php">Review</a></li></strong>
-            <strong><li><a href="search.php">Search</a></li></strong>
+            <strong><li><a href="/PHP/search.php">Search</a></li></strong>
             <strong><li><a href="about.php">About</a></li></strong>
             <strong><li><a href="animals.php">Animals</a></li></strong>
             <strong><li><a href="tickets.php">Tickets</a></li></strong>

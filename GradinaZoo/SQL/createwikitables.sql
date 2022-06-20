@@ -9,7 +9,8 @@ CREATE TABLE `animals` (
   `xml_file` varchar(100) NOT NULL,
   `main_image_file` varchar(100) NOT NULL,
   `created_at` date NOT NULL DEFAULT current_timestamp(),
-  `updated_at` date NOT NULL DEFAULT current_timestamp()
+  `updated_at` date NOT NULL DEFAULT current_timestamp(),
+  UNIQUE(sci_name)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `attributes` (
@@ -18,7 +19,8 @@ CREATE TABLE `attributes` (
   `value` varchar(100) NOT NULL,
   `animal_id` int(11) NOT NULL,
   `created_at` date NOT NULL DEFAULT current_timestamp(),
-  `updated_at` date NOT NULL DEFAULT current_timestamp()
+  `updated_at` date NOT NULL DEFAULT current_timestamp(),
+  UNIQUE(animal_id,type,value)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 ALTER TABLE `animals`
@@ -28,10 +30,10 @@ ALTER TABLE `attributes`
   ADD PRIMARY KEY (`id`);
 
 ALTER TABLE `animals`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
   
 ALTER TABLE `attributes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
   
 ALTER TABLE `attributes`
   ADD FOREIGN KEY (`animal_id`) REFERENCES `animals`(`id`);

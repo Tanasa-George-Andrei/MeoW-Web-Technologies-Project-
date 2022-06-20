@@ -1,0 +1,37 @@
+<animal>
+    <entry>
+        <name>grey parrot</name>
+        <scientific_name>psittacus erithacus</scientific_name>
+        <main_image>440px-Psittacus_erithacus_-perching_on_tray-8d.jpg</main_image>
+        <attributes>
+            <attribute>
+                <type>diet</type>
+                <value>frugivorous</value>
+            </attribute>
+            <attribute>
+                <type>covered in</type>
+                <value>fethers down fethered</value>
+            </attribute>
+            <attribute>
+                <type>coloration</type>
+                <value>grey</value>
+            </attribute>
+            <attribute>
+                <type>type</type>
+                <value>bird</value>
+            </attribute>
+        </attributes>
+    </entry>
+    <gallery>
+        <image>
+            <name>Psittacus erithacus perching on tray</name>
+            <path>440px-Psittacus_erithacus_-perching_on_tray-8d.jpg</path>
+        </image>
+    </gallery>
+    <short_description>The grey parrot is a medium-sized, predominantly grey, black-billed parrot. Its typical weight is 400 g (14 oz), with an approximate length of 33 cm (13 in), and a wingspan of 46–52 cm (18–20+1⁄2 in). The grey colour on the head and wings is generally darker than its body. The head and body feathers have slight white edges. The tail feathers are red.
+
+Due to selection by parrot breeders, some grey parrots are partly or completely red. Both sexes appear similar. The colouration of juveniles is similar to that of adults, but typically their eyes are dark grey to black, in comparison to the yellow irises around dark pupils of the adult birds, and their undertail coverts are tinged with grey. Adults weigh 418–526 g (14+3⁄4–18+1⁄2 oz).
+
+Grey parrots may live for 40–60 years in captivity, although their mean lifespan in the wild appears to be shorter—approximately 23 years. They start breeding at an age of 3-5 years and lay 3-5 eggs per brood. </short_description>
+    <info>The grey parrot (Psittacus erithacus), also known as the Congo grey parrot, Congo African grey parrot or African grey parrot, is an Old World parrot in the family Psittacidae. The Timneh parrot (Psittacus timneh) once was identified as a subspecies of the grey parrot, but has since been elevated to a full species</info>
+</animal>

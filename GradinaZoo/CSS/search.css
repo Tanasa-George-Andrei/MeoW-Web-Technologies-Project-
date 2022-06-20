@@ -75,10 +75,6 @@
     height: max(3vh, 25px);
 }
 
-#search input[type=button] {
-    height: max(3vh, 25px);
-}
-
 #slide-show {
     order: 2;
     flex-grow: 2;
@@ -91,9 +87,15 @@
     max-width: 70vw;
     max-height: 140vh;
     margin-top: -10vh;
+    display: none;
 }
 
 .slides {
+    display: none;
+}
+.slides img{
+    max-height: min(30vh, 400px);
+    object-fit: cover;
     display: none;
 }
 

@@ -1,0 +1,33 @@
+<animal>
+    <entry>
+        <name>giant panda</name>
+        <scientific_name>Ailuropoda melanoleuca</scientific_name>
+        <main_image>Grosser_Panda.jpg</main_image>
+        <attributes>
+            <attribute>
+                <type>diet</type>
+                <value>omnivore</value>
+            </attribute>
+            <attribute>
+                <type>covered in</type>
+                <value>fur</value>
+            </attribute>
+            <attribute>
+                <type>coloration</type>
+                <value>grey, silver, black</value>
+            </attribute>
+            <attribute>
+                <type>type</type>
+                <value>mammal</value>
+            </attribute>
+        </attributes>
+    </entry>
+    <gallery>
+        <image>
+            <name></name>
+            <path></path>
+        </image>
+    </gallery>
+    <short_description></short_description>
+    <info></info>
+</animal>

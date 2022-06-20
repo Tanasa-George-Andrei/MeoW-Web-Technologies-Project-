@@ -1,0 +1,41 @@
+<animal>
+    <entry>
+        <name>Wolf</name>
+        <scientific_name>Canis lupus</scientific_name>
+        <main_image>Front_view_of_a_resting_Canis_lupus_ssp.jpg</main_image>
+        <attributes>
+            <attribute>
+                <type>diet</type>
+                <value>carnivore</value>
+            </attribute>
+            <attribute>
+                <type>covered in</type>
+                <value>fur</value>
+            </attribute>
+            <attribute>
+                <type>coloration</type>
+                <value>grey, white, black, ash</value>
+            </attribute>
+            <attribute>
+                <type>type</type>
+                <value>mammal</value>
+            </attribute>
+        </attributes>
+    </entry>
+    <gallery>
+        <image>
+            <name>Kolmarden Wolf</name>
+            <path>Kolmarden_Wolf.jpg</path>
+        </image>
+        <image>
+            <name>Front view of a resting wolf</name>
+            <path>Front_view_of_a_resting_Canis_lupus_ssp.jpg</path>
+        </image>
+    </gallery>
+    <short_description>The wolf is the largest extant member of the Canidae family, and is further distinguished from coyotes and jackals by a broader snout, shorter ears, a shorter torso and a longer tail. It is slender and powerfully built, with a large, deeply descending rib cage, a sloping back, and a heavily muscled neck. The wolf's legs are moderately longer than those of other canids, which enables the animal to move swiftly, and to overcome the deep snow that covers most of its geographical range in winter. The ears are relatively small and triangular. The wolf's head is large and heavy, with a wide forehead, strong jaws and a long, blunt muzzle. The skull is 230–280 mm (9–11 in) in length and 130–150 mm (5–6 in) in width. The teeth are heavy and large, making them better suited to crushing bone than those of other canids. They are not as specialized as those found in hyenas though. Its molars have a flat chewing surface, but not to the same extent as the coyote, whose diet contains more vegetable matter. Females tend to have narrower muzzles and foreheads, thinner necks, slightly shorter legs, and less massive shoulders than males.</short_description>
+    <info>The wolf (Canis lupus), also known as the gray wolf or grey wolf, is a large canine native to Eurasia and North America. More than thirty subspecies of Canis lupus have been recognized, and gray wolves, as popularly understood, comprise wild subspecies. The wolf is the largest extant member of the family Canidae. It is also distinguished from other Canis species by its less pointed ears and muzzle, as well as a shorter torso and a longer tail. The wolf is nonetheless related closely enough to smaller Canis species, such as the coyote and the golden jackal, to produce fertile hybrids with them. The banded fur of a wolf is usually mottled white, brown, gray, and black, although subspecies in the arctic region may be nearly all white.
+
+Of all members of the genus Canis, the wolf is most specialized for cooperative game hunting as demonstrated by its physical adaptations to tackling large prey, its more social nature, and its highly advanced expressive behaviour including individual or group howling. It travels in nuclear families consisting of a mated pair accompanied by their offspring. Offspring may leave to form their own packs on the onset of sexual maturity and in response to competition for food within the pack. Wolves are also territorial and fights over territory are among the principal causes of wolf mortality. The wolf is mainly a carnivore and feeds on large wild hooved mammals as well as smaller animals, livestock, carrion, and garbage. Single wolves or mated pairs typically have higher success rates in hunting than do large packs. Pathogens and parasites, notably rabies virus, may infect wolves.
+
+The global wild wolf population was estimated to be 300,000 in 2003 and is considered to be of Least Concern by the International Union for Conservation of Nature (IUCN). Wolves have a long history of interactions with humans, having been despised and hunted in most pastoral communities because of their attacks on livestock, while conversely being respected in some agrarian and hunter-gatherer societies. The wolf is also considered the ancestor of the domestic dog. Although the fear of wolves exists in many human societies, the majority of recorded attacks on people have been attributed to animals suffering from rabies. Wolf attacks on humans are rare because wolves are relatively few, live away from people, and have developed a fear of humans because of their experiences with hunters, ranchers, and shepherds. </info>
+</animal>
