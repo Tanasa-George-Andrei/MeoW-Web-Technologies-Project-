@@ -12,7 +12,7 @@
     <div class="login-form">
         <h1>Log In</h1>
 
-        <form action="Login.php" method="POST">
+        <form action="login_form.php" method="POST">
             <?php if(isset($_GET['error'])){ 
                 echo "<p class='error'>". $_GET['error']." </p>";
                 //else if(isset($_GET['success']))

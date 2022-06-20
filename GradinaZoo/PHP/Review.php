@@ -14,7 +14,7 @@
             <ul>
             <?php
                   session_start();
-                  $_SESSION['username'] = "";
+                  // $_SESSION['username'] = "";
                   if(isset($_SESSION['id']) && isset($_SESSION['username'])){
                ?>
                <li> <img src="../Img/profile.jpg" alt=""> </li>

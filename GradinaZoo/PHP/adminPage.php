@@ -19,7 +19,7 @@ if($_SESSION['username'] == 'admin'){}
             <div class="navbar">
                 <ul>
                     <?php
-                        session_start();
+                        // session_start();
                         if(isset($_SESSION['id']) && isset($_SESSION['username'])){
                     ?>
                     <li> <img src="../Img/profile.jpg" alt=""> </li>
