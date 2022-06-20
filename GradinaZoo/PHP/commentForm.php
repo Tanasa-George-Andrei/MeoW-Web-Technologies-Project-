@@ -37,16 +37,27 @@
 
     //VARIANTA 2
     //require('db_connect.php');
-    header('Content-Type: application/json');
+    //header('Content-Type: application/json');
     $json = [];
-    $username = $_POST['username'];
-    $message = $_POST['message'];
-    $post = $_POST['post'];
+    $username = $_REQUEST['username'];
+    $message = $_REQUEST['message'];
+    //$post = $_POST['post'];
+
+    function console_log( $data ) {
+        $output  = "<script>console.log( 'PHP debugger: ";
+        $output .= json_encode(print_r($data, true));
+        $output .= "' );</script>";
+        echo $output;
+    }
+    
+    console_log($_GET['username']);
+    console_log($_POST['username']);
+    console_log($_REQUEST['username']);
 
     $conn=mysqli_connect("localhost", "root", "", "atlaszoologic") or die("Connection failed");
     try {
-        if(isset($_POST['username']) && (!empty($_POST['message']))) {
-            $query = "INSERT INTO review (username, comment) VALUES ('".$_POST['username']."', '".$_POST['message']."')";
+        if(isset($_REQUEST['username']) && (!empty($_REQUEST['message']))) {
+            $query = "INSERT INTO review (username, comment) VALUES ('".$_REQUEST['username']."', '".$_REQUEST['message']."')";
             mysqli_query($conn, $query);
             //header("location:Review.php");
             $json = ['success' => TRUE, 'message' => 'Insert data successfully'];
@@ -58,8 +69,9 @@
     }catch(Exception $e){
         $json = ['error' => TRUE, 'message' => $e->getMessage()];
     }
+    //header("Review.php");
+    console_log($json);
     echo json_encode($json);
-
 
     // VARIANTA 3
     // if($conn){

@@ -96,6 +96,7 @@
             </div>
             <script src="/JavaScript/slideshow.js"></script>
             <div id="animalgrid">
+                
             </div>
             <script src="/JavaScript/searchHandler.js"></script> 
         </div>

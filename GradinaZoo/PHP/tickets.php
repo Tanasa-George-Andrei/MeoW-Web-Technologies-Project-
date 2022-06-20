@@ -1,23 +1,4 @@
-<?php
-
-$alert = '';
-
-if (isset($_POST["date"])) {
-  require "reserve.php";
-  if ($_RSV->save(
-    $_POST["date"], $_POST["slot"], $_POST["name"],
-    $_POST["email"], $_POST["phone"])) {
-    //  echo "<div class='ok'>Reservation saved.</div>";
-    $alert = '<div class="alert-success">
-    <span>Ticket buyed! Thank you for your receipt!</span>
-   </div>';
-  } else { 
-    $alert = '<div class="alert-error">
-    <span>'.$_RSV->error.'</span>
-    </div>';
-  }
-  }
-?>
+<?php include 'tickets_db.php'; ?>
 
 <html lang="en"><head>
   <meta charset="UTF-8">
@@ -41,6 +22,7 @@ if (isset($_POST["date"])) {
             <strong><li><a href="Login.php">LogIn</a></li></strong>
             <strong><li><a href="logout.php">Logout</a></li></strong>
             <strong><li><a href="../HTML/raport.html">Raport</a></li></strong>
+            <strong><li><a href="tickets_table.php">Status</a></li></strong>
         </ul>
     </div>
     <br>
@@ -66,7 +48,7 @@ if (isset($_POST["date"])) {
           <input type="date" name="date" class="data-box" required="" id="res_date" name="date" value="2022-06-18">
 
           <div class="select">
-          <select name="slot">
+          <select name="ticket">
           <option selected disabled>Choose a ticket type</option>
           <option value="normal">Normal ticket</option>
           <option value="weekend">Weekend ticket</option>

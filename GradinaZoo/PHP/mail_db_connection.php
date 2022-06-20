@@ -1,5 +1,5 @@
 <?php
-class Reservation {
+class Connection {
   // (A) CONSTRUCTOR - CONNECT TO DATABASE
   private $pdo; // PDO object
   private $stmt; // SQL statement
@@ -16,7 +16,6 @@ class Reservation {
     } catch (Exception $ex) { exit($ex->getMessage()); }
   }
 
-  
 
   // (B) DESTRUCTOR - CLOSE DATABASE CONNECTION
   function __destruct() {
@@ -25,12 +24,12 @@ class Reservation {
   }
 
   // (C) SAVE RESERVATION
-  function save ($date, $slot, $name, $email, $phone) {
+  function save ($name, $email, $message) {
     try {
       $this->stmt = $this->pdo->prepare(
-        "INSERT INTO `tickets` (`res_date`, `res_slot`, `res_name`, `res_email`, `res_tel`) VALUES (?,?,?,?,?)"
+        "INSERT INTO `mails` (`name`, `email`, `message`) VALUES (?,?,?)"
       );
-      $this->stmt->execute([$date, $slot, $name, $email, $phone]);
+      $this->stmt->execute([$name, $email, $message]);
     } catch (Exception $ex) {
       $this->error = $ex->getMessage();
       return false;
@@ -47,9 +46,9 @@ class Reservation {
 }
 
 define("DB_HOST", "localhost");
-define("DB_NAME", "zoo");
+define("DB_NAME", "atlaszoologic");
 define("DB_CHARSET", "utf8");
-define("DB_USER", "user");
-define("DB_PASSWORD", "password");
+define("DB_USER", "root");
+define("DB_PASSWORD", "");
 
-$_RSV = new Reservation();
+$_RSV = new Connection();

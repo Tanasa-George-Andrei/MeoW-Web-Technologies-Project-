@@ -138,7 +138,7 @@
   
   @media screen and (max-width: 950px){
     .contact-section{
-      flex-direction: column;
+      flex-direction: column-reverse;
     }
   
     .contact-info, .contact-form{

@@ -126,24 +126,42 @@ if($_SESSION['username'] == 'admin'){}
         <script>
             function deleteUser(id){
                 if(confirm('Are you sure you want to delete this user?')){
-                    $.ajax({
-                        url: "userDeleteForm.php",
-                        type: "GET",
-                        data: 'id='+id,
-                        dataType: 'json',
-                        success: function(result) {
-                            if(result.success){
-                                // $('#demo').html('<div style=color:green>'+result.message+'</div>');
-                                alert(result.message);
-                            }else{
-                                // $('#demo').html('<div style=color:red>**'+result.message+'</div>');
-                                alert(result.message);
-                            }
-                        },
-                        error: function(jqXhr, textStatus, errorMessage){
-                            alert(errorMessage, textStatus);
+                    // $.ajax({
+                    //     url: "userDeleteForm.php",
+                    //     type: "GET",
+                    //     data: 'id='+id,
+                    //     dataType: 'json',
+                    //     success: function(result) {
+                    //         if(result.success){
+                    //             // $('#demo').html('<div style=color:green>'+result.message+'</div>');
+                    //             alert(result.message);
+                    //         }else{
+                    //             // $('#demo').html('<div style=color:red>**'+result.message+'</div>');
+                    //             alert(result.message);
+                    //         }
+                    //     },
+                    //     error: function(jqXhr, textStatus, errorMessage){
+                    //         alert(errorMessage, textStatus);
+                    //     }
+                    // });
+
+                    var xhr = new XMLHttpRequest();
+
+                    // Making our connection
+                    var url = "../PHP/animalDeleteForm.php?id="+id;
+                    xhr.open("POST", url, true);
+                    console.log("i'm here");
+                    // function execute after request is successful 
+                    xhr.onreadystatechange = function () {
+                        if (this.readyState == 4 && this.status == 200) {
+                            console.log(this.responseText);
+                            console.log(this);
                         }
-                    });
+                    }
+                    const ID = {id: id};
+                    console.log(ID);
+                    xhr.send();
+                    console.log("i'm here3");
                 }
          }
         </script>
@@ -151,21 +169,39 @@ if($_SESSION['username'] == 'admin'){}
         <script>
             function searchUser(id){
             if(confirm('Are you sure you want to delete this user?')){
-               $.ajax({
-                  url: "userDeleteForm.php",
-                  type: "GET",
-                  data: 'id='+id,
-                  dataType: 'json',
-                  success: function(result) {
-                     if(result.success){
-                        $('#demo').html('<div style=color:green>'+result.message+'</div>');
-                        //window.location.href='';
-                        //load_comment();
-                     }else{
-                        $('#demo').html('<div style=color:red>**'+result.message+'</div>');
-                     }
-                  }
-               });
+            //    $.ajax({
+            //       url: "userDeleteForm.php",
+            //       type: "GET",
+            //       data: 'id='+id,
+            //       dataType: 'json',
+            //       success: function(result) {
+            //          if(result.success){
+            //             $('#demo').html('<div style=color:green>'+result.message+'</div>');
+            //             //window.location.href='';
+            //             //load_comment();
+            //          }else{
+            //             $('#demo').html('<div style=color:red>**'+result.message+'</div>');
+            //          }
+            //       }
+            //    });
+
+            var xhr = new XMLHttpRequest();
+
+                // Making our connection
+                var url = "../PHP/userDeleteForm.php?id="+id;
+                xhr.open("POST", url, true);
+                console.log("i'm here");
+                // function execute after request is successful 
+                xhr.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        console.log(this.responseText);
+                        console.log(this);
+                    }
+                }
+                const ID = {id: id};
+                console.log(ID);
+                xhr.send();
+                console.log("i'm here3");
             }
          }
         </script>

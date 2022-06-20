@@ -47,13 +47,13 @@
         <p>
             Cătălin Manole - Executive Manager <br>
             Alfred Ifrim - Economic Manager <br>
-            <!-- George Mocanu - Marketing Manager<br>
+            George Mocanu - Marketing Manager<br>
             Sergiu Tabacu - Secretary<br>
             Vicențiu Ioniță - Endangered animals department Manager<br>
             Igor Ifrim - Cleaning Manager<br>
-            Vicențiu Dima - Electrician <br> -->
+            Vicențiu Dima - Electrician <br>
         </p>
-        <a href="contact.html">
+        <a href="contact.php">
             <button class="button">Contact</button>
         </a>
     </div>

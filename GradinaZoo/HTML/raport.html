@@ -10,19 +10,24 @@
       <li><a href="welcome.html">Inapoi la Site</a></li>
     <div role="contentinfo"><ol role="directory">
         
-        <li><a href="#introduction">Introducere</a></li><li><a href="#structure">Structura proiectului</a>
+        <li><a href="#introduction">Introducere</a></li>
+        <li><a href="#structure">Structura proiectului</a>
         
-        <ol role="directory"><li><a href="#paginaprincipala"><span>3.1 </span>Pagina principala</a></li>
-            <li><a href="#search"><span>3.5 </span>Search</a></li>
-            <li><a href="#wiki"><span>3.5 </span>wiki</a></li>
-            <li><a href="#review"><span>3.5 </span>Review</a></li>
-            <li><a href="#about"><span>3.5 </span>About</a></li>
-            <li><a href="#contact"><span>3.5 </span>Pagina Contact Us</a></li>
-            <li><a href="#login"><span>3.6 </span>Pagina LogIn</a></li>
-            <li><a href="#register"><span>3.7 </span>Pagina Register</a></li>
-            <li><a href="#lucru">Membrii echipei</a></li>
-            <li><a href="#biblio">Bibliografie</a></li>
+        <ol role="directory">
+            <li><a href="#paginaprincipala">Pagina principala</a></li>
+            <li><a href="#search">Pagina Search</a></li>
+            <li><a href="#wiki">Pagina Wiki</a></li>
+            <li><a href="#review">Pagina Review</a></li>
+            <li><a href="#about">Pagina Contact Us</a></li>
+            <li><a href="#contact">Pagina About Us</a></li>
+            <li><a href="#login">Pagina Login</a></li>
+            <li><a href="#register">Pagina Register</a></li>
+            <li><a href="#animals">Pagina Animals</a></li>
+            <li><a href="#tickets">Pagina Tickets</a></li>
         </ol>
+        <li><a href="#progres">Progresul proiectului</a></li>
+        <li><a href="#lucru">Membrii echipei</a></li>
+        <li><a href="#biblio">Bibliografie</a></li>
         
 
       
@@ -39,16 +44,16 @@
     </section>
     <section id="structure">
       
-      <h3><span>2. </span>Structura proiectului</h3>
+      <h2><span>2. </span>Structura proiectului</h2>
       <p>
         Gradina zoologica online este formata din pagina principala, si inca alte cateva pagini. Avand in vedere ca site-ul nostru este unul de interactiune simultana, fiecare client are propriul lui cont pe care-l poate crea intr-o pagina de register prin completarea cu date personale ca de exemplu nume, prenume, email si altele. Astfel utilizatorul cu ajutorul acestui cont va putea interactiona cu ceilalti utilizatori prin comenatarii la diverse referate si rating. In cazul in care utilizatorii au nevoie de anumite informatii acestia au la dispozitie pagina contact unde isi pot introduce datele.
       </p>
         
       <section id="paginaprincipala">
         
-        <h4><span>2.1 </span>Pagina principala</h4>
+        <h3><span>2.1 </span><a href="../PHP/Welcome.php">Pagina principală</a></h3>
         <p>
-          De indata ce inregistrarea s-a realizat cu succes, utilitorul va fi trimis pe pagina principala, pagina de bun venit, unde v-a putea sa-si faca p idee generala despre aceasta aplicatie web. Aceasta directare se face pe baza sesiunii nou create pentru noul username, sesiune ce incepe de indata ce a fost apasat butonul de submit.<br>
+          De indată ce înregistrarea s-a realizat cu succes, utilizatorul va fi trimis pe pagina principală, pagina de bun venit, unde va putea să-și facă o idee generală în legătură cu această aplicație web. Această directare se face pe baza sesiunii nou create pentru noul username, sesiune ce începe de îndată ce a fost apăsat butonul de submit.<br>
           Autor: Taga Stefan Razvan
         </p>
 
@@ -56,7 +61,7 @@
       </section>
       <section id="search">
         
-        <h5><span>2.2 </span><a href="GradinaZoo/HTML/search.php">Pagina Search</a></h5>
+        <h5><span>2.2 </span><a href="GradinaZoo/PHP/search.php">Pagina Search</a></h5>
         
         <p>
           Pagina Search este punctul de start pentru a accesa intregul catalog de informati despre animalele din gradina ZOO. Aceasta pagina este compusa din trei sectiuni. Prima sectiune este compusa din bara de Search si meniul pliabil Advanced care contine toate filtrele pentru o cautare cat mai usoara in catalog. Dar pentru utilizatori mai avansati mai oferim si capabilitatea de a cauta fuzzy fara filtre in catalogul nostru prin scrierea tag-ului specific intre "<>". A doua sectiune este compusa dintr-un carusel de imagini ale celor mai cautate animale ale gradini ZOO, fiecare imagie fiind un link catre pagina Wiki a animalului respectiv. A treia sectiune contine catalogul intreg de animale al gradini ZOO sub forma unei liste de imagini infinite cu posibilitatea pentru utilizator de a alege metoda de sortare, fiecare imagine reprezinta un link catre pagina de Wiki a animalului aratat in imagine.<br>
@@ -66,7 +71,7 @@
       </section>
       <section id="wiki">
         
-        <h6><span>2.3 </span><a href="GradinaZoo/HTML/wiki.html">Pagina Wiki</a></h6>
+        <h3><span>2.3 </span><a href="../HTML/wiki.html">Pagina Wiki</a></h3>
         <p>
           Pagina Wiki contine toate informatiile despre animalul dorit vizualizari. Aceasta este impartita in doua coloane. Colana din stanga contine o imagine cu animalul, numele normal/popular si numele stintific al acestuai. Colana din dreapta contine toate informatiile despre animal separata in sectiuni relaventate, personalizate pentur fiecare categorie de animal.<br>  
           Daca permite timpul se va implementa un sistem de votare similar Reddit pentru fiecare animal si animalele cu cel mai mare scor vor fi afisate pe pagina de search in carusel. Dar va mai fi folosit si pentru sortarea animaleleor in sectiune de catalog a pagini Search<br>
@@ -76,7 +81,7 @@
       </section>
       <section id="review">
           
-          <h7><span>2.4 </span>Pagina Review</h7>
+          <h3><span>2.4 </span><a href="../PHP/Review.php"></a>Pagina Review</h3>
           <p>
             Pagina Review este pagina cu cel mai mare procent de interactiune cu ceilalti utilizatori pentru ca permite fiecaruia sa-si exprime parerea despre aplicatie sau sa lase sugestii printr-un mesaj. O data accesata aceasta pagina de catre utilitor acesta va putea vizualiza parerirele celorlalti utilitori si sa completeze doua campuri cu username si mesaj pentru a putea lasa un nou mesaj, o noua parere. Campul username trebuie completat cu aceeasi valoare ca cea din baza de date si odata submis acele valori se va face un select din baza de data pentru a vedea daca username-ul corespunde si in caz afirmativ se returna mesajul transmis altfel se va returna un mesaj de eroare. <br>
             Autor: Taga Stefan Razvan
@@ -86,11 +91,11 @@
         
       <section id="contact">
         
-        <h8><span>2.5 <a href="GradinaZoo/HTML/contact.html">Pagina Contact Us</a></h8>
+        <h3><span>2.5 </span><a href="../PHP/contact.php">Pagina Contact Us</a></h3>
         <p>
           Pagina Contact Us este o pagină cu ajutorul căreia utilizatorul poate comunica cu echipa care administrează situl. Această pagină este structurată în două sub-pagini: 
             1. Prima sub-pagină este formată din patru câmpuri ce contin informații despre adresa grădinii zoologice, numărul de telefon al acesteia, adresa de email unde poate fi găsita administratorul sitului și programul grădinii zoologice. Am ales să folosesc un font Gill Sans, cu textul de culoare albă deoarece informația trebuie să fie citită cu ușurință de către cel care vizitează situl.
-            2. A doua sub-pagină conține tot 3 câmpuri, care trebuie completate de către utilitor, acestea fiind numele, adresa de email și mesajul pe care acesta dorește să-l transmita către administrator. Completarea câmpurilor pentru utilizator și email trebuie să fie facută cu valorile care sunt în baza de date, acestea fiind verificate și pe baza unei interogări a bazei de date cu aceste valori, se realizează transmiterea mesajului. Dacă aceste informații nu se regăsesc în baza de date, se va returna un mesaj de eroare. Am ales să folosesc un font Gill Sans, cu textul de culoare gri și un chenar transparent deoarece informația trebuie să fie citită cu ușurință de către cel care vizitează situl.<br>
+            2. A doua sub-pagină conține tot 3 câmpuri, care trebuie completate de către utilitor, acestea fiind numele, adresa de email și mesajul pe care acesta dorește să-l transmita către administrator. Am ales să folosesc un font Gill Sans, cu textul de culoare gri și un chenar transparent deoarece informația trebuie să fie citită cu ușurință de către cel care vizitează situl.<br>
           Autor: Costin Mihnea-Radu - grupa 2B2
         </p>
         
@@ -98,7 +103,7 @@
 
       <section id="about">
           
-        <h9><span>2.6 <a href="GradinaZoo/HTML/about.html">Pagina About Us</a></h9>
+        <h3><span>2.6 </span><a href="../PHP/about.php">Pagina About Us</a></h3>
         <p>
           Pagina About Us este o alta pagină din bara principală de meniu ce poate fi accesată oricând. Aici, utilizatorul poate afla informații despre Grădina Zoologică și despre angajații acesteia. Dacă utiizatorul dorește să transmită un mesaj către Grădina Zoologică, trebuie să acceseze butonul de Contact, care-l va redirecționa spre pagina Contact Us. Am ales să împart informația pe o singură coloană în două părți, folosind fontul Gill Sans deoarece informația poate fi citită cu ușurință de către orice utilizator.  <br>
           Autor: Costin Mihnea-Radu - grupa 2B2
@@ -108,7 +113,7 @@
 
       <section id="login">
         
-        <h10><span>2.7 </span>Pagina LogIn</h10>
+        <h3><span>2.7 </span><a href="../PHP/login.php"></a>Pagina Login</h3>
         <p>
           Pagina de Log In are un principiu opus fata de pagina de register. Daca in pagina de register completam campurile cu anumite valorile care ulterior erau salvate in baza de date, de data aceasta trebuie sa completam valori care exista in baza de date. Cand utilitorul incearca sa se conncteze la contul sau trebuie sa completeze campurile de username si password cu exact aceleasi valori pe care le-a introdus in pagina de register in momentul crearii contului. Dupa ce au fost completate aceste valorile se va face un select din baza de date cu exact campurile completate de utilitor si aceastea corespund atunci utilitorul va fi redirectat in pagina principala, iar in caz contrar va aparea un mesaj de eroare.<br>
           Autor: Taga Stefan Razvan
@@ -119,7 +124,7 @@
 
       <section id="register">
         
-        <h11><span>2.8 </span>Pagina Register</h11>
+        <h3><span>2.8 </span><a href="../PHP/register.php"></a>Pagina Register</h3>
         <p>
           In aceasta pagina intra doar utilizatorii care nu au cont si vor sa acceseze informatiile site-ului. Pagina de register se bazeaza pe o conexiune la o baza de date specifica, in care vor fi memorate valorile campurilor ce sunt cerute a fi completate. Fiecare utilitor trebuie sa aiba un username propriu, de aceea odata introdus un username se verifica daca a mai fost utilizat de un alt utilizator sau nu. O data completat campul de username, mai sunt necesare a fi completate campurile fullname, email si password, care vor si stocate in baza de date in coloanele specifice.<br>
           Autor: Taga Stefan Razvan
@@ -127,18 +132,41 @@
         
       </section>
           
-      <section id="register">
+      <section id="animals">
         
-       <h12><span>2.9 <a href="GradinaZoo/HTML/animals.html">Pagina Animals</a></h12>
+       <h3><span>2.9 </span><a href="../PHP/animals.php">Pagina Animals</a></h3>
        <p>
          Pagina Animals ne oferă informații legate clasele de animale care se regăsesc în colecția grădinii zoologice. Acestea sunt afișate sub forma unor carduri, în interiorul cărora se află o imagine a unui animal aparținând clasei respective, numele clasei și câteva informații atât despre aceasta, cât și despre numărul de specii care se regăsesc în grădina zoologică aparținând clasei. Chenarul unde am introdus textul are backround de culoare albă, iar textul are culoare neagră, cu font Gill Sans. Am optat această formatare deoarece în acest fel, informația este ușor vizibilă pentru utilizatori, scrisul fiind suficient de vizibil. Imaginile sunt clare și reprezentative pentru clasa din care fac parte, fiind ușor pentru cei care accesează să recunoască animalul din poză.  <br>
          Autor: Costin Mihnea-Radu - grupa 2B2
        </p>
     
-          </section>
+      </section>
+
+      <section id="tickets">
+        
+        <h3><span>2.10 </span><a href="../PHP/tickets.php">Pagina Tickets</a></h3>
+        <p>
+          Pagina Tickets este o pagină prin intermediul căreia pot fi achiziționate bilete pentru vizitarea grădinii zoologice. Această pagină este structurată în două sub-pagini: 
+            1. Prima sub-pagină este formată din patru câmpuri ce contin informații despre tipurile de bilete ce pot fi achiziționate. Am ales să folosesc un font Gill Sans, cu textul de culoare albă deoarece informația trebuie să fie citită cu ușurință de către cel care vizitează situl.
+            2. A doua sub-pagină conține 5 câmpuri, care trebuie completate de către utilitor, acestea fiind numele, adresa de email, numărul de telefon, data rezervării și tipul de bilet ales. După ce au fost completate datele, pagina va afișa un mesaj de confirmare, iar informațiile furnizate vor fi adăugate în baza de date a grădinii zoologice. Am ales să folosesc un font Gill Sans, cu textul de culoare gri și un chenar transparent deoarece informația trebuie să fie citită cu ușurință de către cel care vizitează situl.<br>
+          Autor: Costin Mihnea-Radu - grupa 2B2
+        </p>
+        
+      </section>
+
+      <section id="progres">
+        
+        <h2><span>3. </span>Progresul proiectului</h2>
+        <p>
+          După realizarea prototipului aplicației, la nivelul paginilor a fost implementată funcționalitatea, cu ajutorul fișierelor în format php și javascript, dar și a bazei de date, care facilitează gestiunea datelor de care avem nevoie. Sarcinile au fost împărțite în mod egal, astfel încât proiectul să poată fi realizat cu succes.
+
+        </p>
+        
+      </section>      
+
       <section id="lucru">
         
-        <h13><span>3. </span>Membrii echipei</h13>
+        <h2><span>4. </span>Membrii echipei</h2>
         <p>
           Costin Mihnea-Radu - grupa 2B2 <br>
           Taga Stefan Razvan - grupa 2B3 <br>
@@ -149,7 +177,7 @@
       </section>
       <section id="biblio">
         
-        <h14><span>4. </span>Bibliografie</h14>
+        <h2><span>5. </span>Bibliografie</h2>
         <p>
           1.Pagina Cursului<br>
           2.https://www.pexels.com/<br>
